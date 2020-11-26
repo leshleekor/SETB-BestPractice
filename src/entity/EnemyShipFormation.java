@@ -12,7 +12,7 @@ import engine.Cooldown;
 import engine.Core;
 import engine.DrawManager;
 import engine.DrawManager.SpriteType;
-import engine.GameSettings;
+import engine.LevelSettings;
 
 /**
  * Groups enemy ships into a formation that moves together.
@@ -108,21 +108,21 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 	/**
 	 * Constructor, sets the initial conditions.
 	 * 
-	 * @param gameSettings
+	 * @param levelSettings
 	 *            Current game settings.
 	 */
-	public EnemyShipFormation(final GameSettings gameSettings) {
+	public EnemyShipFormation(final LevelSettings levelSettings) {
 		this.drawManager = Core.getDrawManager();
 		this.logger = Core.getLogger();
 		this.enemyShips = new ArrayList<List<EnemyShip>>();
 		this.currentDirection = Direction.RIGHT;
 		this.movementInterval = 0;
-		this.nShipsWide = gameSettings.getFormationWidth();
-		this.nShipsHigh = gameSettings.getFormationHeight();
-		this.shootingInterval = gameSettings.getShootingFrecuency();
-		this.shootingVariance = (int) (gameSettings.getShootingFrecuency()
+		this.nShipsWide = levelSettings.getFormationWidth();
+		this.nShipsHigh = levelSettings.getFormationHeight();
+		this.shootingInterval = levelSettings.getShootingFrecuency();
+		this.shootingVariance = (int) (levelSettings.getShootingFrecuency()
 				* SHOOTING_VARIANCE);
-		this.baseSpeed = gameSettings.getBaseSpeed();
+		this.baseSpeed = levelSettings.getBaseSpeed();
 		this.movementSpeed = this.baseSpeed;
 		this.positionX = INIT_POS_X;
 		this.positionY = INIT_POS_Y;
@@ -193,7 +193,7 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 		if(this.shootingCooldown == null) {
 			this.shootingCooldown = Core.getVariableCooldown(shootingInterval,
 					shootingVariance);
-			this.shootingCooldown.reset();
+			this.shootingCooldown.restart();
 		}
 		
 		cleanUp();
@@ -336,7 +336,7 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 		EnemyShip shooter = this.shooters.get(index);
 
 		if (this.shootingCooldown.checkFinished()) {
-			this.shootingCooldown.reset();
+			this.shootingCooldown.restart();
 			bullets.add(BulletPool.getBullet(shooter.getPositionX()
 					+ shooter.width / 2, shooter.getPositionY(), BULLET_SPEED));
 		}
