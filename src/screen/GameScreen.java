@@ -4,10 +4,7 @@ import java.awt.event.KeyEvent;
 import java.util.HashSet;
 import java.util.Set;
 
-import engine.Cooldown;
-import engine.Core;
-import engine.GameSettings;
-import engine.GameState;
+import engine.*;
 import entity.Bullet;
 import entity.BulletPool;
 import entity.EnemyShip;
@@ -39,7 +36,7 @@ public class GameScreen extends Screen {
 	private static final int SEPARATION_LINE_HEIGHT = 40;
 
 	/** Current game difficulty settings. */
-	private GameSettings gameSettings;
+	private LevelSettings levelSettings;
 	/** Current difficulty level number. */
 	private int level;
 	/** Formation of enemy ships. */
@@ -76,9 +73,9 @@ public class GameScreen extends Screen {
 	 * 
 	 * @param gameState
 	 *            Current game state.
-	 * @param gameSettings
+	 * @param levelSettings
 	 *            Current game settings.
-	 * @param bonnusLife
+	 * @param bonusLife
 	 *            Checks if a bonus life is awarded this level.
 	 * @param width
 	 *            Screen width.
@@ -88,11 +85,11 @@ public class GameScreen extends Screen {
 	 *            Frames per second, frame rate at which the game is run.
 	 */
 	public GameScreen(final GameState gameState,
-			final GameSettings gameSettings, final boolean bonusLife,
-			final int width, final int height, final int fps) {
+					  final LevelSettings levelSettings, final boolean bonusLife,
+					  final int width, final int height, final int fps) {
 		super(width, height, fps);
 
-		this.gameSettings = gameSettings;
+		this.levelSettings = levelSettings;
 		this.bonusLife = bonusLife;
 		this.level = gameState.getLevel();
 		this.score = gameState.getScore();
@@ -109,13 +106,13 @@ public class GameScreen extends Screen {
 	public final void initialize() {
 		super.initialize();
 
-		enemyShipFormation = new EnemyShipFormation(this.gameSettings);
+		enemyShipFormation = new EnemyShipFormation(this.levelSettings);
 		enemyShipFormation.attach(this);
 		this.ship = new Ship(this.width / 2, this.height - 30);
 		// Appears each 10-30 seconds.
 		this.enemyShipSpecialCooldown = Core.getVariableCooldown(
 				BONUS_SHIP_INTERVAL, BONUS_SHIP_VARIANCE);
-		this.enemyShipSpecialCooldown.reset();
+		this.enemyShipSpecialCooldown.restart();
 		this.enemyShipSpecialExplosionCooldown = Core
 				.getCooldown(BONUS_SHIP_EXPLOSION);
 		this.screenFinishedCooldown = Core.getCooldown(SCREEN_CHANGE_INTERVAL);
@@ -124,7 +121,7 @@ public class GameScreen extends Screen {
 		// Special input delay / countdown.
 		this.gameStartTime = System.currentTimeMillis();
 		this.inputDelay = Core.getCooldown(INPUT_DELAY);
-		this.inputDelay.reset();
+		this.inputDelay.restart();
 	}
 
 	/**
@@ -181,7 +178,7 @@ public class GameScreen extends Screen {
 			if (this.enemyShipSpecial == null
 					&& this.enemyShipSpecialCooldown.checkFinished()) {
 				this.enemyShipSpecial = new EnemyShip();
-				this.enemyShipSpecialCooldown.reset();
+				this.enemyShipSpecialCooldown.restart();
 				this.logger.info("A special ship appears");
 			}
 			if (this.enemyShipSpecial != null
@@ -202,7 +199,7 @@ public class GameScreen extends Screen {
 		if ((this.enemyShipFormation.isEmpty() || this.lives == 0)
 				&& !this.levelFinished) {
 			this.levelFinished = true;
-			this.screenFinishedCooldown.reset();
+			this.screenFinishedCooldown.restart();
 		}
 
 		if (this.levelFinished && this.screenFinishedCooldown.checkFinished())
@@ -296,7 +293,7 @@ public class GameScreen extends Screen {
 					this.score += this.enemyShipSpecial.getPointValue();
 					this.shipsDestroyed++;
 					this.enemyShipSpecial.destroy();
-					this.enemyShipSpecialExplosionCooldown.reset();
+					this.enemyShipSpecialExplosionCooldown.restart();
 					recyclable.add(bullet);
 				}
 			}

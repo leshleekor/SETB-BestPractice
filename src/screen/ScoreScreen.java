@@ -5,10 +5,7 @@ import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
 
-import engine.Cooldown;
-import engine.Core;
-import engine.GameState;
-import engine.Score;
+import engine.*;
 
 /**
  * Implements the score screen.
@@ -59,7 +56,7 @@ public class ScoreScreen extends Screen {
 	 *            Current game state.
 	 */
 	public ScoreScreen(final int width, final int height, final int fps,
-			final GameState gameState) {
+					   final GameState gameState) {
 		super(width, height, fps);
 
 		this.score = gameState.getScore();
@@ -70,7 +67,7 @@ public class ScoreScreen extends Screen {
 		this.name = "AAA".toCharArray();
 		this.nameCharSelected = 0;
 		this.selectionCooldown = Core.getCooldown(SELECTION_TIME);
-		this.selectionCooldown.reset();
+		this.selectionCooldown.restart();
 
 		try {
 			this.highScores = Core.getFileManager().loadHighScores();
@@ -105,7 +102,7 @@ public class ScoreScreen extends Screen {
 		if (this.inputDelay.checkFinished()) {
 			if (inputManager.isKeyDown(KeyEvent.VK_ESCAPE)) {
 				// Return to main menu.
-				this.returnCode = 1;
+				this.returnCode = ScreenCode.MAIN;
 				this.isRunning = false;
 				if (this.isNewRecord)
 					saveScore();
@@ -121,26 +118,26 @@ public class ScoreScreen extends Screen {
 				if (inputManager.isKeyDown(KeyEvent.VK_RIGHT)) {
 					this.nameCharSelected = this.nameCharSelected == 2 ? 0
 							: this.nameCharSelected + 1;
-					this.selectionCooldown.reset();
+					this.selectionCooldown.restart();
 				}
 				if (inputManager.isKeyDown(KeyEvent.VK_LEFT)) {
 					this.nameCharSelected = this.nameCharSelected == 0 ? 2
 							: this.nameCharSelected - 1;
-					this.selectionCooldown.reset();
+					this.selectionCooldown.restart();
 				}
 				if (inputManager.isKeyDown(KeyEvent.VK_UP)) {
 					this.name[this.nameCharSelected] =
 							(char) (this.name[this.nameCharSelected]
 									== LAST_CHAR ? FIRST_CHAR
 							: this.name[this.nameCharSelected] + 1);
-					this.selectionCooldown.reset();
+					this.selectionCooldown.restart();
 				}
 				if (inputManager.isKeyDown(KeyEvent.VK_DOWN)) {
 					this.name[this.nameCharSelected] =
 							(char) (this.name[this.nameCharSelected]
 									== FIRST_CHAR ? LAST_CHAR
 							: this.name[this.nameCharSelected] - 1);
-					this.selectionCooldown.reset();
+					this.selectionCooldown.restart();
 				}
 			}
 		}

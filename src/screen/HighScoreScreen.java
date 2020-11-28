@@ -9,9 +9,9 @@ import engine.Score;
 
 /**
  * Implements the high scores screen, it shows player records.
- * 
+ *
  * @author <a href="mailto:RobertoIA1987@gmail.com">Roberto Izquierdo Amo</a>
- * 
+ *
  */
 public class HighScoreScreen extends Screen {
 
@@ -20,7 +20,7 @@ public class HighScoreScreen extends Screen {
 
 	/**
 	 * Constructor, establishes the properties of the screen.
-	 * 
+	 *
 	 * @param width
 	 *            Screen width.
 	 * @param height
@@ -31,7 +31,8 @@ public class HighScoreScreen extends Screen {
 	public HighScoreScreen(final int width, final int height, final int fps) {
 		super(width, height, fps);
 
-		this.returnCode = 1;
+		this.returnCode = ScreenCode.MAIN;
+		//if press space: return to title screenthis.returnCode = 1;
 
 		try {
 			this.highScores = Core.getFileManager().loadHighScores();
@@ -42,7 +43,7 @@ public class HighScoreScreen extends Screen {
 
 	/**
 	 * Starts the action.
-	 * 
+	 *
 	 * @return Next screen code.
 	 */
 	public final int run() {
@@ -58,9 +59,9 @@ public class HighScoreScreen extends Screen {
 		super.update();
 
 		draw();
-		if (inputManager.isKeyDown(KeyEvent.VK_SPACE)
-				&& this.inputDelay.checkFinished())
+		if (inputManager.isKeyDown(KeyEvent.VK_SPACE) && this.inputDelay.checkFinished()){
 			this.isRunning = false;
+		}
 	}
 
 	/**
