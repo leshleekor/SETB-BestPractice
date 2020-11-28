@@ -305,12 +305,12 @@ public final class DrawManager {
 		}
 		backBufferGraphics.setColor(Color.GRAY);
 		drawCenteredRegularString(screen, instructionsString,
-				screen.getHeight() / 2 );
+				screen.getHeight() / 6 );
 		backBufferGraphics.setColor(Color.YELLOW);
 		drawCenteredRegularString(screen, difficultyString,
-				screen.getHeight() / 3 );
+				screen.getHeight() / 4 );
 		backBufferGraphics.setColor(Color.GREEN);
-		drawCenteredBigString(screen, titleString, screen.getHeight() / 4);
+		drawCenteredBigString(screen, titleString, screen.getHeight() / 9);  //글자 겹쳐서 위치 수정함
 	}
 
 	/**
@@ -339,7 +339,7 @@ public final class DrawManager {
 			backBufferGraphics.setColor(Color.WHITE);
 		drawCenteredRegularString(screen, difficultyString, screen.getHeight()
 				/ 3 * 2 + fontRegularMetrics.getHeight() * 2);
-		if (option == ScreenCode.HIGH_SCORES)
+		if (option == ScreenCode.HIGH_SCORES_MENU)  //메뉴로 변경
 			backBufferGraphics.setColor(Color.GREEN);
 		else
 			backBufferGraphics.setColor(Color.WHITE);
@@ -362,6 +362,37 @@ public final class DrawManager {
 	 *            Option selected.
 	 */
 	public void drawDifficultyMenu(final Screen screen, final int option) {
+		String easyString = "Easy";
+		String normalString = "Normal";
+		String hardString = "Hard";
+		String backString = "Back to Main";
+
+		if (option == DifficultyScreen.MENU_EASY)
+			backBufferGraphics.setColor(Color.GREEN);
+		else
+			backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, easyString,
+				screen.getHeight() / 3 * 2);
+		if (option == DifficultyScreen.MENU_NORMAL)
+			backBufferGraphics.setColor(Color.GREEN);
+		else
+			backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, normalString, screen.getHeight()
+				/ 3 * 2 + fontRegularMetrics.getHeight() * 2);
+		if (option == DifficultyScreen.MENU_HARD)
+			backBufferGraphics.setColor(Color.GREEN);
+		else
+			backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, hardString, screen.getHeight() / 3
+				* 2 + fontRegularMetrics.getHeight() * 4);
+		if (option == DifficultyScreen.MENU_BACK)
+			backBufferGraphics.setColor(Color.GREEN);
+		else
+			backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, backString, screen.getHeight() / 3
+				* 2 + fontRegularMetrics.getHeight() * 6);
+	}
+	public void drawHighScoreScreenMenu(final Screen screen, final int option) {
 		String easyString = "Easy";
 		String normalString = "Normal";
 		String hardString = "Hard";

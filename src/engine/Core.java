@@ -11,6 +11,8 @@ import java.util.logging.Logger;
 import screen.ScreenCode;
 import screen.*;
 
+import static engine.GameDifficulty.*;
+
 /**
  * Implements core game logic.
  * 
@@ -109,8 +111,23 @@ public final class Core {
 							bonusLife, width, height, FPS);
 					LOGGER.info("Starting " + WIDTH + "x" + HEIGHT
 							+ " game screen at " + FPS + " fps.");
+					String message="";
+					if(getDiffculty()==EASY){
+						message="Starts Easy Level";
+					}
+					else if(getDiffculty()==NORMAL){
+						message="Starts Normal Level";
+					}
+					else if(getDiffculty()==HARD){
+						message="Starts Hard Level";
+					}
+					else {
+						message="Starts Easy Level";
+					}
+					LOGGER.info(message);
 					frame.setScreen(currentScreen);
 					LOGGER.info("Closing game screen.");
+
 
 					gameState = ((GameScreen) currentScreen).getGameState();
 
@@ -141,6 +158,7 @@ public final class Core {
 				returnCode = frame.setScreen(currentScreen);
 				LOGGER.info("Closing high score screen.");
 				break;
+
 			case ScreenCode.DIFFICULTY:
 				// Difficulty Setting Screen.
 				currentScreen = new DifficultyScreen(width, height, FPS);
@@ -149,6 +167,15 @@ public final class Core {
 				returnCode = frame.setScreen(currentScreen);
 				LOGGER.info("Closing difficulty setting screen.");
 				break;
+
+				case ScreenCode.HIGH_SCORES_MENU:
+					// High scores.
+					currentScreen = new HighScoreScreenMenu(width, height, FPS);
+					LOGGER.info("Starting " + WIDTH + "x" + HEIGHT
+							+ " high score menu screen at " + FPS + " fps.");
+					returnCode = frame.setScreen(currentScreen);
+					LOGGER.info("Closing high score menu screen.");
+					break;
 			default:
 				break;
 			}
@@ -179,7 +206,7 @@ public final class Core {
 	/**
 	 * Controls access to the drawing manager.
 	 * 
-	 * @return Application draw manager.
+	 * @return Application draw manager.n
 	 */
 	public static DrawManager getDrawManager() {
 		return DrawManager.getInstance();

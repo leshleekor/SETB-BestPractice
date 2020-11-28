@@ -7,6 +7,8 @@ import java.util.List;
 
 import engine.*;
 
+import static engine.GameDifficulty.*;
+
 /**
  * Implements the score screen.
  * 
@@ -32,8 +34,12 @@ public class ScoreScreen extends Screen {
 	private int bulletsShot;
 	/** Total ships destroyed by the player. */
 	private int shipsDestroyed;
-	/** List of past high scores. */
+	/** List of past easy(default) high scores. */
 	private List<Score> highScores;
+	/** List of past normal level high scores. */
+	private List<Score> highScores_NORMAL;
+	/** List of past hard level high scores. */
+	private List<Score> highScores_HARD;
 	/** Checks if current score is a new high score. */
 	private boolean isNewRecord;
 	/** Player name for record input. */

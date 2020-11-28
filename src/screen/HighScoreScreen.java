@@ -32,7 +32,7 @@ public class HighScoreScreen extends Screen {
 	public HighScoreScreen(final int width, final int height, final int fps) {
 		super(width, height, fps);
 
-		this.returnCode = 1;
+		this.returnCode = ScreenCode.HIGH_SCORES_MENU; //if press space: return to title screen
 
 		try {
 			this.highScores = Core.getFileManager().loadHighScores();
