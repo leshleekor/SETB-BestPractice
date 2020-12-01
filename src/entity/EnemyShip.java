@@ -106,7 +106,7 @@ public class EnemyShip extends Entity {
 	 */
 	public final void update() {
 		if (this.animationCooldown.checkFinished()) {
-			this.animationCooldown.reset();
+			this.animationCooldown.restart();
 
 			switch (this.spriteType) {
 			case EnemyShipA1:

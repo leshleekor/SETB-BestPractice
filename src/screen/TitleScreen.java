@@ -4,6 +4,7 @@ import java.awt.event.KeyEvent;
 
 import engine.Cooldown;
 import engine.Core;
+import engine.GameDifficulty;
 
 /**
  * Implements the title screen.
@@ -33,9 +34,9 @@ public class TitleScreen extends Screen {
 		super(width, height, fps);
 
 		// Defaults to play.
-		this.returnCode = 2;
+		this.returnCode = ScreenCode.PLAY;
 		this.selectionCooldown = Core.getCooldown(SELECTION_TIME);
-		this.selectionCooldown.reset();
+		this.selectionCooldown.restart();
 	}
 
 	/**
@@ -61,15 +62,16 @@ public class TitleScreen extends Screen {
 			if (inputManager.isKeyDown(KeyEvent.VK_UP)
 					|| inputManager.isKeyDown(KeyEvent.VK_W)) {
 				previousMenuItem();
-				this.selectionCooldown.reset();
+				this.selectionCooldown.restart();
 			}
 			if (inputManager.isKeyDown(KeyEvent.VK_DOWN)
 					|| inputManager.isKeyDown(KeyEvent.VK_S)) {
 				nextMenuItem();
-				this.selectionCooldown.reset();
+				this.selectionCooldown.restart();
 			}
-			if (inputManager.isKeyDown(KeyEvent.VK_SPACE))
+			if (inputManager.isKeyDown(KeyEvent.VK_SPACE)) {
 				this.isRunning = false;
+			}
 		}
 	}
 
@@ -77,24 +79,28 @@ public class TitleScreen extends Screen {
 	 * Shifts the focus to the next menu item.
 	 */
 	private void nextMenuItem() {
-		if (this.returnCode == 3)
-			this.returnCode = 0;
-		else if (this.returnCode == 0)
-			this.returnCode = 2;
-		else
-			this.returnCode++;
+		if (this.returnCode == ScreenCode.EXIT)
+			this.returnCode = ScreenCode.PLAY;
+		else if (this.returnCode == ScreenCode.PLAY)
+			this.returnCode = ScreenCode.DIFFICULTY;
+		else if(this.returnCode == ScreenCode.DIFFICULTY)
+			this.returnCode = ScreenCode.HIGH_SCORES;
+		else if(this.returnCode == ScreenCode.HIGH_SCORES)
+			this.returnCode = ScreenCode.EXIT;
 	}
 
 	/**
 	 * Shifts the focus to the previous menu item.
 	 */
 	private void previousMenuItem() {
-		if (this.returnCode == 0)
-			this.returnCode = 3;
-		else if (this.returnCode == 2)
-			this.returnCode = 0;
-		else
-			this.returnCode--;
+		if (this.returnCode == ScreenCode.PLAY)
+			this.returnCode = ScreenCode.EXIT;
+		else if(this.returnCode == ScreenCode.HIGH_SCORES)
+			this.returnCode = ScreenCode.DIFFICULTY;
+		else if(this.returnCode == ScreenCode.DIFFICULTY)
+			this.returnCode = ScreenCode.PLAY;
+		else if(this.returnCode == ScreenCode.EXIT)
+			this.returnCode = ScreenCode.HIGH_SCORES;
 	}
 
 	/**
@@ -103,7 +109,7 @@ public class TitleScreen extends Screen {
 	private void draw() {
 		drawManager.initDrawing(this);
 
-		drawManager.drawTitle(this);
+		drawManager.drawTitle(this, "Invaders", "select with w+s / arrows, confirm with space");
 		drawManager.drawMenu(this, this.returnCode);
 
 		drawManager.completeDrawing(this);
