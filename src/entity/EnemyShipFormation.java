@@ -338,7 +338,7 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 		if (this.shootingCooldown.checkFinished()) {
 			this.shootingCooldown.restart();
 			bullets.add(BulletPool.getBullet(shooter.getPositionX()
-					+ shooter.width / 2, shooter.getPositionY(), BULLET_SPEED));
+					+ shooter.width / 2, shooter.getPositionY(), BULLET_SPEED, 3));
 		}
 	}
 
@@ -427,3 +427,4 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 		return this.shipCount <= 0;
 	}
 }
+
