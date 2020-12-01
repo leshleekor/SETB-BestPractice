@@ -18,6 +18,8 @@ public class GameState {
 	private int bulletsShot;
 	/** Ships destroyed until now. */
 	private int shipsDestroyed;
+	/** whether game is Paused */
+	private boolean isPaused;
 
 	/**
 	 * Constructor.
@@ -35,12 +37,13 @@ public class GameState {
 	 */
 	public GameState(final int level, final int score,
 			final int livesRemaining, final int bulletsShot,
-			final int shipsDestroyed) {
+			final int shipsDestroyed, final boolean isPaused) {
 		this.level = level;
 		this.score = score;
 		this.livesRemaining = livesRemaining;
 		this.bulletsShot = bulletsShot;
 		this.shipsDestroyed = shipsDestroyed;
+		this.isPaused = isPaused;
 	}
 
 	/**
@@ -77,5 +80,7 @@ public class GameState {
 	public final int getShipsDestroyed() {
 		return shipsDestroyed;
 	}
+
+	public final boolean getGameIsPaused() { return isPaused; }
 
 }
