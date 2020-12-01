@@ -27,7 +27,9 @@ public final class Core {
 	private static final int FPS = 60;
 
 	/** Max lives. */
-	private static final int MAX_LIVES = 3;
+	private static final int MAX_P1_LIVES = 3;
+	private static final int MAX_P2_LIVES = 3;
+
 	/** Levels between extra life. */
 	private static final int EXTRA_LIFE_FRECUENCY = 3;
 	/** Total number of levels. */
@@ -87,8 +89,8 @@ public final class Core {
 		GameState gameState2;
 		int returnCode = ScreenCode.MAIN;
 		do {
-			gameState2 = new GameState(1, 0, MAX_LIVES, 0, 0);
-			gameState = new GameState(1, 0, MAX_LIVES, 0, 0);
+			gameState2 = new GameState(1, 0, MAX_P2_LIVES, 0, 0);
+			gameState = new GameState(1, 0, MAX_P1_LIVES, 0, 0);
 
 			switch (returnCode) {
 			case ScreenCode.MAIN:
@@ -105,7 +107,11 @@ public final class Core {
 					// One extra live every few levels.
 					boolean bonusLife = gameState.getLevel()
 							% EXTRA_LIFE_FRECUENCY == 0
-							&& gameState.getLivesRemaining() < MAX_LIVES;
+							&& gameState.getLivesRemaining() < MAX_P1_LIVES;
+
+					boolean bonusLife2 = gameState2.getLevel()
+							% EXTRA_LIFE_FRECUENCY == 0
+							&& gameState2.getLivesRemaining() < MAX_P2_LIVES;
 
 					currentScreen = new GameScreen(gameState, gameState2,
 							levelSettings.get(gameState.getLevel() - 1),
@@ -130,7 +136,7 @@ public final class Core {
 							gameState2.getBulletsShot(),
 							gameState2.getShipsDestroyed());
 
-				} while (gameState.getLivesRemaining() > 0
+				} while ((gameState.getLivesRemaining() > 0 || gameState2.getLivesRemaining() > 0)
 						&& gameState.getLevel() <= NUM_LEVELS);
 
 				LOGGER.info("Starting " + WIDTH + "x" + HEIGHT

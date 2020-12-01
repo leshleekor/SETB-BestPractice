@@ -107,8 +107,8 @@ public class GameScreen extends Screen {
       this.lives2 = gameState2.getLivesRemaining();
 
       if (this.bonusLife) {
-         this.lives++;
-         this.lives2++;
+         if(this.lives > 0 && this.lives < 3) this.lives++;
+         if(this.lives2 > 0 && this.lives2 < 3) this.lives2++;
       }
       this.bulletsShot = gameState.getBulletsShot();
       this.shipsDestroyed = gameState.getShipsDestroyed();
@@ -149,9 +149,11 @@ public class GameScreen extends Screen {
     */
    public final int run() {
       super.run();
+      if(this.lives > 0)
+         this.score += LIFE_SCORE * (this.lives - 1);
 
-      this.score += LIFE_SCORE * (this.lives - 1);
-      this.score2 += LIFE_SCORE * (this.lives2 - 1);
+      if(this.lives2 > 0)
+         this.score2 += LIFE_SCORE * (this.lives2 - 1);
       this.logger.info("Screen cleared with a score of " + this.score + " " + this.score2);
 
       return this.returnCode;
@@ -165,7 +167,7 @@ public class GameScreen extends Screen {
 
       if (this.inputDelay.checkFinished() && !this.levelFinished) {
 
-         if (!this.ship.isDestroyed()) {
+         if (!this.ship.isDestroyed() && this.lives > 0) {
             boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_RIGHT);
             boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_LEFT);
             boolean isRightBorder = this.ship.getPositionX()
@@ -185,7 +187,7 @@ public class GameScreen extends Screen {
          }
 
          if(GameMode.getGameMode() == GameMode.P2){
-            if (!this.ship2.isDestroyed()) {
+            if (!this.ship2.isDestroyed() && this.lives2 > 0) {
                boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_D);
                boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_A);
 
@@ -237,7 +239,7 @@ public class GameScreen extends Screen {
       cleanBullets();
       draw();
 
-      if ((this.enemyShipFormation.isEmpty() || this.lives == 0)
+      if ((this.enemyShipFormation.isEmpty() || (this.lives == 0 && this.lives2 == 0))
             && !this.levelFinished) {
          this.levelFinished = true;
          this.screenFinishedCooldown.restart();
@@ -254,13 +256,14 @@ public class GameScreen extends Screen {
    private void draw() {
       drawManager.initDrawing(this);
 
-      drawManager.drawEntity(this.ship, this.ship.getPositionX(),
-            this.ship.getPositionY());
+      if(this.lives > 0)
+         drawManager.drawEntity(this.ship, this.ship.getPositionX(),
+                 this.ship.getPositionY());
 
       if(GameMode.getGameMode() == GameMode.P2) {
-         drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
-               this.ship2.getPositionY());
-
+         if(this.lives2 > 0)
+            drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
+                    this.ship2.getPositionY());
       }
 
       if (this.enemyShipSpecial != null)
@@ -278,8 +281,10 @@ public class GameScreen extends Screen {
       drawManager.drawScore(this, this.score, 1);
       drawManager.drawLives(this, this.lives, Color.GREEN, 1);
 
-      drawManager.drawScore(this, this.score2, 2);
-      drawManager.drawLives(this, this.lives2, Color.BLUE, 2);
+      if(GameMode.getGameMode() == GameMode.P2) {
+         drawManager.drawScore(this, this.score2, 2);
+         drawManager.drawLives(this, this.lives2, Color.BLUE, 2);
+      }
 
       drawManager.drawHorizontalLine(this, SEPARATION_LINE_HEIGHT - 1);
 
@@ -320,16 +325,29 @@ public class GameScreen extends Screen {
       Set<Bullet> bulletSet = new HashSet<Bullet>();
       for (Bullet bullet : this.bullets)
          if (bullet.getSpeed() > 0) {
+            // Player-Bullet 충돌 처리
+            if (checkCollision(bullet, this.ship2) && !this.levelFinished) {
+               // recyclable.add(bullet);
+               if (!this.ship2.isDestroyed()) {
+                  this.ship2.destroy();
+                  if(this.lives2 > 0)
+                     this.lives2--;
+                  this.logger.info("Hit on player ship2, " + this.lives2
+                          + " lives remaining.");
+               }
+            }
             if (checkCollision(bullet, this.ship) && !this.levelFinished) {
                bulletSet.add(bullet);
                if (!this.ship.isDestroyed()) {
                   this.ship.destroy();
-                  this.lives--;
+                  if(this.lives > 0)
+                     this.lives--;
                   this.logger.info("Hit on player ship, " + this.lives
                         + " lives remaining.");
                }
             }
          } else {
+            // Enemy-Bullet 충돌 처리
             for (EnemyShip enemyShip : this.enemyShipFormation)
                if (!enemyShip.isDestroyed()
                      && checkCollision(bullet, enemyShip)) {
