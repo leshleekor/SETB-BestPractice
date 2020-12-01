@@ -107,8 +107,8 @@ public class GameScreen extends Screen {
 		this.lives2 = gameState2.getLivesRemaining();
 
 		if (this.bonusLife) {
-			this.lives++;
-			this.lives2++;
+			if(this.lives > 0 && this.lives < 3) this.lives++;
+			if(this.lives2 > 0 && this.lives2 < 3) this.lives2++;
 		}
 		this.bulletsShot = gameState.getBulletsShot();
 		this.shipsDestroyed = gameState.getShipsDestroyed();
@@ -164,8 +164,7 @@ public class GameScreen extends Screen {
 		super.update();
 
 		if (this.inputDelay.checkFinished() && !this.levelFinished) {
-
-			if (!this.ship.isDestroyed()) {
+			if (!this.ship.isDestroyed() && this.lives > 0) {
 				boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_RIGHT);
 				boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_LEFT);
 				boolean isRightBorder = this.ship.getPositionX()
@@ -185,7 +184,7 @@ public class GameScreen extends Screen {
 			}
 
 			if(GameMode.getGameMode() == GameMode.P2){
-				if (!this.ship2.isDestroyed()) {
+				if (!this.ship2.isDestroyed() && this.lives2 > 0) {
 					boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_D);
 					boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_A);
 
@@ -236,7 +235,7 @@ public class GameScreen extends Screen {
 		cleanBullets();
 		draw();
 
-		if ((this.enemyShipFormation.isEmpty() || this.lives == 0)
+		if ((this.enemyShipFormation.isEmpty() || (this.lives == 0 && this.lives2 == 0))
 				&& !this.levelFinished) {
 			this.levelFinished = true;
 			this.screenFinishedCooldown.restart();
@@ -382,9 +381,13 @@ public class GameScreen extends Screen {
 	 * 
 	 * @return Current game state.
 	 */
-	public final GameState getGameState() {
-		return new GameState(this.level, this.score, this.lives,
-				this.bulletsShot, this.shipsDestroyed);
+	public final GameState getGameState(int player) {
+		if(player == 1)
+			return new GameState(this.level, this.score, this.lives,
+					this.bulletsShot, this.shipsDestroyed);
+		else
+			return new GameState(this.level2, this.score2, this.lives2,
+					this.bulletsShot2, this.shipsDestroyed2);
 	}
 }
 
