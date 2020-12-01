@@ -1,5 +1,6 @@
 package screen;
 
+import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.util.HashSet;
 import java.util.Set;
@@ -124,8 +125,8 @@ public class GameScreen extends Screen {
 
 		enemyShipFormation = new EnemyShipFormation(this.levelSettings);
 		enemyShipFormation.attach(this);
-		this.ship = new Ship(this.width / 2 - 20, this.height - 30);
-		this.ship2 = new Ship(this.width / 2 + 20, this.height - 30);
+		this.ship = new Ship(this.width / 2 - 20, this.height - 30, Color.GREEN);
+		this.ship2 = new Ship(this.width / 2 + 20, this.height - 30, Color.BLUE);
 		// Appears each 10-30 seconds.
 		this.enemyShipSpecialCooldown = Core.getVariableCooldown(
 				BONUS_SHIP_INTERVAL, BONUS_SHIP_VARIANCE);
@@ -252,8 +253,12 @@ public class GameScreen extends Screen {
 					bullet.getPositionY());
 
 		// Interface.
-		drawManager.drawScore(this, this.score);
-		drawManager.drawLives(this, this.lives);
+		drawManager.drawScore(this, this.score, 1);
+		drawManager.drawLives(this, this.lives, Color.GREEN, 1);
+
+		drawManager.drawScore(this, this.score2, 2);
+		drawManager.drawLives(this, this.lives2, Color.BLUE, 2);
+
 		drawManager.drawHorizontalLine(this, SEPARATION_LINE_HEIGHT - 1);
 
 		// Countdown to game start.

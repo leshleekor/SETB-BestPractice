@@ -238,12 +238,15 @@ public final class DrawManager {
 	 *            Screen to draw on.
 	 * @param score
 	 *            Current score.
+	 * @param ppos
+	 *            player position. ex. player1, player2
 	 */
-	public void drawScore(final Screen screen, final int score) {
+	public void drawScore(final Screen screen, final int score, int ppos) {
 		backBufferGraphics.setFont(fontRegular);
 		backBufferGraphics.setColor(Color.WHITE);
 		String scoreString = String.format("%04d", score);
-		backBufferGraphics.drawString(scoreString, screen.getWidth() - 60, 25);
+//		backBufferGraphics.drawString(scoreString, screen.getWidth() - 60, 25);
+		backBufferGraphics.drawString(scoreString, screen.getWidth()/2*(ppos-1) + 20, 60);
 	}
 
 	/**
@@ -253,14 +256,19 @@ public final class DrawManager {
 	 *            Screen to draw on.
 	 * @param lives
 	 *            Current lives.
+	 * @param color
+	 *            Ship's Color
+	 * @param ppos
+	 *            player position. ex. player1, player2
 	 */
-	public void drawLives(final Screen screen, final int lives) {
+	public void drawLives(final Screen screen, final int lives, Color color, int ppos) {
 		backBufferGraphics.setFont(fontRegular);
 		backBufferGraphics.setColor(Color.WHITE);
-		backBufferGraphics.drawString(Integer.toString(lives), 20, 25);
-		Ship dummyShip = new Ship(0, 0);
+		backBufferGraphics.drawString(Integer.toString(lives), screen.getWidth()/2*(ppos-1) + 20, 25);
+
+		Ship dummyShip = new Ship(0, 0, color);
 		for (int i = 0; i < lives; i++)
-			drawEntity(dummyShip, 40 + 35 * i, 10);
+			drawEntity(dummyShip, screen.getWidth()/2*(ppos-1) + 40 + 35 * i, 10);
 	}
 
 	/**
