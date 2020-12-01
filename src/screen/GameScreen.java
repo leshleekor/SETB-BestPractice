@@ -252,12 +252,14 @@ public class GameScreen extends Screen {
 	private void draw() {
 		drawManager.initDrawing(this);
 
-		drawManager.drawEntity(this.ship, this.ship.getPositionX(),
-				this.ship.getPositionY());
+		if(this.lives > 0)
+			drawManager.drawEntity(this.ship, this.ship.getPositionX(),
+					this.ship.getPositionY());
 
 		if(GameMode.getGameMode() == GameMode.P2) {
-			drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
-					this.ship2.getPositionY());
+			if(this.lives2 > 0)
+				drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
+						this.ship2.getPositionY());
 
 		}
 
@@ -276,8 +278,10 @@ public class GameScreen extends Screen {
 		drawManager.drawScore(this, this.score, 1);
 		drawManager.drawLives(this, this.lives, Color.GREEN, 1);
 
-		drawManager.drawScore(this, this.score2, 2);
-		drawManager.drawLives(this, this.lives2, Color.BLUE, 2);
+		if(GameMode.getGameMode() == GameMode.P2) {
+			drawManager.drawScore(this, this.score2, 2);
+			drawManager.drawLives(this, this.lives2, Color.BLUE, 2);
+		}
 
 		drawManager.drawHorizontalLine(this, SEPARATION_LINE_HEIGHT - 1);
 
@@ -319,16 +323,29 @@ public class GameScreen extends Screen {
 		Set<Bullet> recyclable = new HashSet<Bullet>();
 		for (Bullet bullet : this.bullets)
 			if (bullet.getSpeed() > 0) {
+				// Player-Bullet 충돌 처리
+				if (checkCollision(bullet, this.ship2) && !this.levelFinished) {
+					recyclable.add(bullet);
+					if (!this.ship2.isDestroyed()) {
+						this.ship2.destroy();
+						if(this.lives2 > 0)
+							this.lives2--;
+						this.logger.info("Hit on player ship2, " + this.lives2
+								+ " lives remaining.");
+					}
+				}
 				if (checkCollision(bullet, this.ship) && !this.levelFinished) {
 					recyclable.add(bullet);
 					if (!this.ship.isDestroyed()) {
 						this.ship.destroy();
-						this.lives--;
+						if(this.lives > 0)
+							this.lives--;
 						this.logger.info("Hit on player ship, " + this.lives
 								+ " lives remaining.");
 					}
 				}
 			} else {
+				// Enemy-Bullet 충돌 처리
 				for (EnemyShip enemyShip : this.enemyShipFormation)
 					if (!enemyShip.isDestroyed()
 							&& checkCollision(bullet, enemyShip)) {
