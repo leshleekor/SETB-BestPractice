@@ -34,7 +34,7 @@ public class GameScreen extends Screen {
 	/** Time from finishing the level to screen change. */
 	private static final int SCREEN_CHANGE_INTERVAL = 1500;
 	/** Height of the interface separation line. */
-	private static final int SEPARATION_LINE_HEIGHT = 40;
+	private static final int SEPARATION_LINE_HEIGHT = 80;
 
 	/** Current game difficulty settings. */
 	private LevelSettings levelSettings;
