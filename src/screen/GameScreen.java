@@ -234,8 +234,10 @@ public class GameScreen extends Screen {
 		drawManager.drawEntity(this.ship, this.ship.getPositionX(),
 				this.ship.getPositionY());
 
-		drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
-				this.ship2.getPositionY());
+		if(GameMode.getGameMode() == GameMode.P2) {
+			drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
+					this.ship2.getPositionY());
+		}
 
 		if (this.enemyShipSpecial != null)
 			drawManager.drawEntity(this.enemyShipSpecial,
