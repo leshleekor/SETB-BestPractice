@@ -84,8 +84,10 @@ public final class Core {
 		GameMode.setGameMode(GameMode.P1);
 		
 		GameState gameState;
+		GameState gameState2;
 		int returnCode = ScreenCode.MAIN;
 		do {
+			gameState2 = new GameState(1, 0, MAX_LIVES, 0, 0);
 			gameState = new GameState(1, 0, MAX_LIVES, 0, 0);
 
 			switch (returnCode) {
@@ -104,8 +106,8 @@ public final class Core {
 					boolean bonusLife = gameState.getLevel()
 							% EXTRA_LIFE_FRECUENCY == 0
 							&& gameState.getLivesRemaining() < MAX_LIVES;
-					
-					currentScreen = new GameScreen(gameState,
+
+					currentScreen = new GameScreen(gameState, gameState2,
 							levelSettings.get(gameState.getLevel() - 1),
 							bonusLife, width, height, FPS);
 					LOGGER.info("Starting " + WIDTH + "x" + HEIGHT
