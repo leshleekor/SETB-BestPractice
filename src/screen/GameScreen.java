@@ -34,7 +34,7 @@ public class GameScreen extends Screen {
 	/** Time from finishing the level to screen change. */
 	private static final int SCREEN_CHANGE_INTERVAL = 1500;
 	/** Height of the interface separation line. */
-	private static final int SEPARATION_LINE_HEIGHT = 80;
+	private static final int SEPARATION_LINE_HEIGHT = 40;
 
 	/** Current game difficulty settings. */
 	private LevelSettings levelSettings;
@@ -166,11 +166,8 @@ public class GameScreen extends Screen {
 		if (this.inputDelay.checkFinished() && !this.levelFinished) {
 
 			if (!this.ship.isDestroyed()) {
-				boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_RIGHT)
-						|| inputManager.isKeyDown(KeyEvent.VK_D);
-				boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_LEFT)
-						|| inputManager.isKeyDown(KeyEvent.VK_A);
-
+				boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_RIGHT);
+				boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_LEFT);
 				boolean isRightBorder = this.ship.getPositionX()
 						+ this.ship.getWidth() + this.ship.getSpeed() > this.width - 1;
 				boolean isLeftBorder = this.ship.getPositionX()
@@ -182,10 +179,34 @@ public class GameScreen extends Screen {
 				if (moveLeft && !isLeftBorder) {
 					this.ship.moveLeft();
 				}
-				if (inputManager.isKeyDown(KeyEvent.VK_SPACE))
+				if (inputManager.isKeyDown(KeyEvent.VK_UP))
 					if (this.ship.shoot(this.bullets))
 						this.bulletsShot++;
 			}
+
+			if(GameMode.getGameMode() == GameMode.P2){
+				if (!this.ship2.isDestroyed()) {
+					boolean moveRight = inputManager.isKeyDown(KeyEvent.VK_D);
+					boolean moveLeft = inputManager.isKeyDown(KeyEvent.VK_A);
+
+					boolean isRightBorder = this.ship2.getPositionX()
+							+ this.ship2.getWidth() + this.ship2.getSpeed() > this.width - 1;
+					boolean isLeftBorder = this.ship2.getPositionX()
+							- this.ship2.getSpeed() < 1;
+
+					if (moveRight && !isRightBorder) {
+						this.ship2.moveRight();
+					}
+					if (moveLeft && !isLeftBorder) {
+						this.ship2.moveLeft();
+					}
+					if (inputManager.isKeyDown(KeyEvent.VK_W))
+						if (this.ship2.shoot(this.bullets))
+							this.bulletsShot++;
+				}
+			}
+
+
 
 			if (this.enemyShipSpecial != null) {
 				if (!this.enemyShipSpecial.isDestroyed())
@@ -235,10 +256,10 @@ public class GameScreen extends Screen {
 		drawManager.drawEntity(this.ship, this.ship.getPositionX(),
 				this.ship.getPositionY());
 
-		// GameMode가 2P일 때 2P Ship을 보이게 함
 		if(GameMode.getGameMode() == GameMode.P2) {
 			drawManager.drawEntity(this.ship2, this.ship2.getPositionX(),
 					this.ship2.getPositionY());
+
 		}
 
 		if (this.enemyShipSpecial != null)
@@ -366,3 +387,4 @@ public class GameScreen extends Screen {
 				this.bulletsShot, this.shipsDestroyed);
 	}
 }
+
