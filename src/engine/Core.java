@@ -20,9 +20,9 @@ import screen.*;
 public final class Core {
 
 	/** Width of current screen. */
-	private static final int WIDTH = 448;
+	private static final int WIDTH = 500;
 	/** Height of current screen. */
-	private static final int HEIGHT = 580;
+	private static final int HEIGHT = 680;
 	/** Max fps of current screen. */
 	private static final int FPS = 60;
 
@@ -136,18 +136,37 @@ public final class Core {
 							gameState2.getBulletsShot(),
 							gameState2.getShipsDestroyed());
 
-				} while ((gameState.getLivesRemaining() > 0) || ((GameMode.getGameMode() == GameMode.P2) && gameState2.getLivesRemaining() > 0)
+				}while ((gameState.getLivesRemaining() > 0) || ((GameMode.getGameMode() == GameMode.P2) && gameState2.getLivesRemaining() > 0)
 						&& gameState.getLevel() <= NUM_LEVELS);
+				if(GameMode.getGameMode() == GameMode.P1) {
+					LOGGER.info("Starting " + WIDTH + "x" + HEIGHT
+							+ " score screen at " + FPS + " fps, with a score of "
+							+ gameState.getScore() + ", "
+							+ gameState.getLivesRemaining() + " lives remaining, "
+							+ gameState.getBulletsShot() + " bullets shot and "
+							+ gameState.getShipsDestroyed() + " ships destroyed.");
+					currentScreen = new ScoreScreen(width, height, FPS, gameState);
+					returnCode = frame.setScreen(currentScreen);
+					LOGGER.info("Closing score screen.");
+				}
+				else if(GameMode.getGameMode() == GameMode.P2) {
+					LOGGER.info("Starting " + WIDTH + "x" + HEIGHT
+							+ " score screen at " + FPS + " fps, with a score of "
+							+ gameState.getScore() + ", "
+							+ gameState.getLivesRemaining() + " lives remaining, "
+							+ gameState.getBulletsShot() + " bullets shot and "
+							+ gameState.getShipsDestroyed() + " ships destroyed."
+							+ gameState2.getScore() + ", "
+							+ gameState2.getLivesRemaining() + " lives remaining, "
+							+ gameState2.getBulletsShot() + " bullets shot and "
+							+ gameState2.getShipsDestroyed() + " ships destroyed.");
+					currentScreen = new ScoreScreen2(width, height, FPS, gameState, gameState2);
+					returnCode = frame.setScreen(currentScreen);
+					LOGGER.info("Closing score screen.");
+					
+				}
 
-				LOGGER.info("Starting " + WIDTH + "x" + HEIGHT
-						+ " score screen at " + FPS + " fps, with a score of "
-						+ gameState.getScore() + ", "
-						+ gameState.getLivesRemaining() + " lives remaining, "
-						+ gameState.getBulletsShot() + " bullets shot and "
-						+ gameState.getShipsDestroyed() + " ships destroyed.");
-				currentScreen = new ScoreScreen(width, height, FPS, gameState);
-				returnCode = frame.setScreen(currentScreen);
-				LOGGER.info("Closing score screen.");
+				
 				break;
 			case ScreenCode.HIGH_SCORES:
 				// High scores.
@@ -257,3 +276,4 @@ public final class Core {
 		ModeSettings = modeSettings;
 	}
 }
+

@@ -325,7 +325,7 @@ public class GameScreen extends Screen {
       Set<Bullet> bulletSet = new HashSet<Bullet>();
       for (Bullet bullet : this.bullets)
          if (bullet.getSpeed() > 0) {
-            // Player-Bullet 충돌 처리
+            // Player-Bullet 異⑸룎 泥섎━
             if(GameMode.getGameMode() == GameMode.P2) {
                if (checkCollision(bullet, this.ship2) && !this.levelFinished) {
                   // recyclable.add(bullet);
@@ -349,18 +349,20 @@ public class GameScreen extends Screen {
                }
             }
          } else {
-            // Enemy-Bullet 충돌 처리
+            // Enemy-Bullet 異⑸룎 泥섎━
             for (EnemyShip enemyShip : this.enemyShipFormation)
                if (!enemyShip.isDestroyed()
                      && checkCollision(bullet, enemyShip)) {
                   System.out.println(bullet.getOwner());
                   if(bullet.getOwner()==1) {
-                     this.score += enemyShip.getPointValue();                     
+                     this.score += enemyShip.getPointValue();
+                     this.shipsDestroyed++;
                   }
                   if(bullet.getOwner()==2) {
-                     this.score2 += enemyShip.getPointValue();                     
+                     this.score2 += enemyShip.getPointValue();
+                     this.shipsDestroyed2++;
                   }
-                  this.shipsDestroyed++;
+                  
                   this.enemyShipFormation.destroy(enemyShip);
                   bulletSet.add(bullet);
                }
@@ -368,12 +370,14 @@ public class GameScreen extends Screen {
                   && !this.enemyShipSpecial.isDestroyed()
                   && checkCollision(bullet, this.enemyShipSpecial)) {
                if(bullet.getOwner()==1) {
-                  this.score += this.enemyShipSpecial.getPointValue();                  
+                  this.score += this.enemyShipSpecial.getPointValue();
+                  this.shipsDestroyed++;
                }
                if(bullet.getOwner()==2) {
-                  this.score2 += this.enemyShipSpecial.getPointValue();                  
+                  this.score2 += this.enemyShipSpecial.getPointValue();
+                  this.shipsDestroyed2++;
                }
-               this.shipsDestroyed++;
+               
                this.enemyShipSpecial.destroy();
                this.enemyShipSpecialExplosionCooldown.restart();
                bulletSet.add(bullet);
@@ -421,5 +425,6 @@ public class GameScreen extends Screen {
 					this.bulletsShot2, this.shipsDestroyed2);
 	}
 }
+
 
 
