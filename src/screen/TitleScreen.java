@@ -1,6 +1,7 @@
 package screen;
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 import engine.Cooldown;
 import engine.Core;
@@ -44,7 +45,7 @@ public class TitleScreen extends Screen {
 	 * 
 	 * @return Next screen code.
 	 */
-	public final int run() {
+	public final int run() throws IOException {
 		super.run();
 
 		return this.returnCode;
@@ -53,7 +54,7 @@ public class TitleScreen extends Screen {
 	/**
 	 * Updates the elements on screen and checks for events.
 	 */
-	protected final void update() {
+	protected final void update() throws IOException {
 		super.update();
 
 		draw();
