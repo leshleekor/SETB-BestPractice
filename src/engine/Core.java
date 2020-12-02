@@ -136,7 +136,7 @@ public final class Core {
 							gameState2.getBulletsShot(),
 							gameState2.getShipsDestroyed());
 
-				} while ((gameState.getLivesRemaining() > 0 || gameState2.getLivesRemaining() > 0)
+				} while ((gameState.getLivesRemaining() > 0) || ((GameMode.getGameMode() == GameMode.P2) && gameState2.getLivesRemaining() > 0)
 						&& gameState.getLevel() <= NUM_LEVELS);
 
 				LOGGER.info("Starting " + WIDTH + "x" + HEIGHT

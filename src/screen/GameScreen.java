@@ -239,7 +239,7 @@ public class GameScreen extends Screen {
       cleanBullets();
       draw();
 
-      if ((this.enemyShipFormation.isEmpty() || (this.lives == 0 && this.lives2 == 0))
+      if ((this.enemyShipFormation.isEmpty() || (this.lives == 0 && (GameMode.getGameMode() == GameMode.P1 || this.lives2 == 0)))
             && !this.levelFinished) {
          this.levelFinished = true;
          this.screenFinishedCooldown.restart();
@@ -326,14 +326,16 @@ public class GameScreen extends Screen {
       for (Bullet bullet : this.bullets)
          if (bullet.getSpeed() > 0) {
             // Player-Bullet 충돌 처리
-            if (checkCollision(bullet, this.ship2) && !this.levelFinished) {
-               // recyclable.add(bullet);
-               if (!this.ship2.isDestroyed()) {
-                  this.ship2.destroy();
-                  if(this.lives2 > 0)
-                     this.lives2--;
-                  this.logger.info("Hit on player ship2, " + this.lives2
-                          + " lives remaining.");
+            if(GameMode.getGameMode() == GameMode.P2) {
+               if (checkCollision(bullet, this.ship2) && !this.levelFinished) {
+                  // recyclable.add(bullet);
+                  if (!this.ship2.isDestroyed()) {
+                     this.ship2.destroy();
+                     if (this.lives2 > 0)
+                        this.lives2--;
+                     this.logger.info("Hit on player ship2, " + this.lives2
+                             + " lives remaining.");
+                  }
                }
             }
             if (checkCollision(bullet, this.ship) && !this.levelFinished) {
