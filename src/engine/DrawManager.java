@@ -177,6 +177,20 @@ public final class DrawManager {
 	}
 
 	/**
+	 * Draws the completed drawing on screen.
+	 *
+	 * @param screen
+	 *            Screen to draw on.
+	 */
+	public void drawPause(final Screen screen) {
+		String pauseString = "Game Paused";
+		String instructionString = "PRESS ESC To Resume Game";
+		backBufferGraphics.setColor(Color.GREEN);
+		drawCenteredBigString(screen, pauseString, 150);
+		backBufferGraphics.setColor(Color.WHITE);
+		drawCenteredRegularString(screen, instructionString, 250);
+	}
+	/**
 	 * Draws an entity, using the apropiate image.
 	 * 
 	 * @param entity

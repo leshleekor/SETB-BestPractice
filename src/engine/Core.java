@@ -85,7 +85,7 @@ public final class Core {
 		GameState gameState;
 		int returnCode = ScreenCode.MAIN;
 		do {
-			gameState = new GameState(1, 0, MAX_LIVES, 0, 0);
+			gameState = new GameState(1, 0, MAX_LIVES, 0, 0, false);
 
 			switch (returnCode) {
 			case ScreenCode.MAIN:
@@ -118,7 +118,7 @@ public final class Core {
 							gameState.getScore(),
 							gameState.getLivesRemaining(),
 							gameState.getBulletsShot(),
-							gameState.getShipsDestroyed());
+							gameState.getShipsDestroyed(), gameState.getGameIsPaused());
 
 				} while (gameState.getLivesRemaining() > 0
 						&& gameState.getLevel() <= NUM_LEVELS);
