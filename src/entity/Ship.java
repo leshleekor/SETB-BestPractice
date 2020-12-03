@@ -68,7 +68,7 @@ public class Ship extends Entity {
 	 */
 	public final boolean shoot(final Set<Bullet> bullets) {
 		if (this.shootingCooldown.checkFinished()) {
-			this.shootingCooldown.reset();
+			this.shootingCooldown.restart();
 			bullets.add(BulletPool.getBullet(positionX + this.width / 2,
 					positionY, BULLET_SPEED));
 			return true;
@@ -90,7 +90,7 @@ public class Ship extends Entity {
 	 * Switches the ship to its destroyed state.
 	 */
 	public final void destroy() {
-		this.destructionCooldown.reset();
+		this.destructionCooldown.restart();
 	}
 
 	/**

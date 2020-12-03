@@ -4,10 +4,7 @@ import java.awt.Insets;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import engine.Cooldown;
-import engine.Core;
-import engine.DrawManager;
-import engine.InputManager;
+import engine.*;
 
 /**
  * Implements a generic screen.
@@ -45,7 +42,7 @@ public class Screen {
 
 	/**
 	 * Constructor, establishes the properties of the screen.
-	 * 
+	 *
 	 * @param width
 	 *            Screen width.
 	 * @param height
@@ -62,7 +59,7 @@ public class Screen {
 		this.inputManager = Core.getInputManager();
 		this.logger = Core.getLogger();
 		this.inputDelay = Core.getCooldown(INPUT_DELAY);
-		this.inputDelay.reset();
+		this.inputDelay.restart();
 		this.returnCode = 0;
 	}
 

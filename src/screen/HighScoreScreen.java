@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.util.List;
 
 import engine.Core;
+import engine.GameDifficulty;
 import engine.Score;
 
 /**
@@ -69,7 +70,8 @@ public class HighScoreScreen extends Screen {
 	private void draw() {
 		drawManager.initDrawing(this);
 
-		drawManager.drawHighScoreMenu(this);
+//		drawManager.drawHighScoreMenu(this);
+		drawManager.drawTitle(this, "High Scores", "Press Space to return");
 		drawManager.drawHighScores(this, this.highScores);
 
 		drawManager.completeDrawing(this);
