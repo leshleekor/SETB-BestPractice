@@ -1,6 +1,5 @@
 package engine;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.ConsoleHandler;
@@ -57,7 +56,7 @@ public final class Core {
 	 * @param args
 	 *            Program args, ignored.
 	 */
-	public static void main(final String[] args) throws IOException {
+	public static void main(final String[] args) {
 		try {
 			LOGGER.setUseParentHandlers(false);
 

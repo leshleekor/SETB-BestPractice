@@ -86,7 +86,7 @@ public class ScoreScreen extends Screen {
 	 * 
 	 * @return Next screen code.
 	 */
-	public final int run() throws IOException {
+	public final int run() {
 		super.run();
 
 		return this.returnCode;
@@ -95,7 +95,7 @@ public class ScoreScreen extends Screen {
 	/**
 	 * Updates the elements on screen and checks for events.
 	 */
-	protected final void update() throws IOException {
+	protected final void update() {
 		super.update();
 
 		draw();
