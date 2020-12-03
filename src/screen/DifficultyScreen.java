@@ -5,7 +5,6 @@ import engine.Core;
 import engine.GameDifficulty;
 
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 
 public class DifficultyScreen extends Screen{
     /** Milliseconds between changes in user selection. */
@@ -46,7 +45,7 @@ public class DifficultyScreen extends Screen{
      *
      * @return Next screen code.
      */
-    public final int run() throws IOException {
+    public final int run() {
         super.run();
 
         return this.returnCode;
@@ -55,7 +54,7 @@ public class DifficultyScreen extends Screen{
     /**
      * Updates the elements on screen and checks for events.
      */
-    protected final void update() throws IOException {
+    protected final void update() {
         super.update();
 
         draw();

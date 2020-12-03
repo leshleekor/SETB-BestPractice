@@ -1,7 +1,6 @@
 package screen;
 
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -130,7 +129,7 @@ public class GameScreen extends Screen {
 	 * 
 	 * @return Next screen code.
 	 */
-	public final int run() throws IOException {
+	public final int run() {
 		super.run();
 
 		this.score += LIFE_SCORE * (this.lives - 1);
@@ -142,7 +141,7 @@ public class GameScreen extends Screen {
 	/**
 	 * Updates the elements on screen and checks for events.
 	 */
-	protected final void update() throws IOException {
+	protected final void update() {
 		super.update();
 
 		if (this.inputDelay.checkFinished() && !this.levelFinished) {

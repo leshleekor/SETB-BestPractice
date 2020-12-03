@@ -32,7 +32,7 @@ public class HighScoreScreen extends Screen {
 	public HighScoreScreen(final int width, final int height, final int fps) {
 		super(width, height, fps);
 
-		this.returnCode = ScreenCode.MAIN;
+		this.returnCode = 1;
 
 		try {
 			this.highScores = Core.getFileManager().loadHighScores();
@@ -46,7 +46,7 @@ public class HighScoreScreen extends Screen {
 	 * 
 	 * @return Next screen code.
 	 */
-	public final int run() throws IOException {
+	public final int run() {
 		super.run();
 
 		return this.returnCode;
@@ -55,19 +55,13 @@ public class HighScoreScreen extends Screen {
 	/**
 	 * Updates the elements on screen and checks for events.
 	 */
-	protected final void update() throws IOException {
+	protected final void update() {
 		super.update();
 
 		draw();
 		if (inputManager.isKeyDown(KeyEvent.VK_SPACE)
-				&& this.inputDelay.checkFinished()){
+				&& this.inputDelay.checkFinished())
 			this.isRunning = false;
-		}
-		else if (inputManager.isKeyDown(KeyEvent.VK_SHIFT)
-		&& this.inputDelay.checkFinished()){
-			Core.getFileManager().deleteScores();
-			this.isRunning = false;
-		}
 	}
 
 	/**
@@ -82,7 +76,4 @@ public class HighScoreScreen extends Screen {
 
 		drawManager.completeDrawing(this);
 	}
-
-
-
 }

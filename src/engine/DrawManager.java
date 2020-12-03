@@ -311,14 +311,7 @@ public final class DrawManager {
 				screen.getHeight() / 3 );
 		backBufferGraphics.setColor(Color.GREEN);
 		drawCenteredBigString(screen, titleString, screen.getHeight() / 4);
-		if(titleString.equals("High Scores")){
-			backBufferGraphics.setColor(Color.GRAY);
-			drawCenteredRegularString(screen, "Press Shift to Delete all recode",
-					screen.getHeight()*3 / 4 );
-		}
 	}
-
-
 
 	/**
 	 * Draws main menu.
