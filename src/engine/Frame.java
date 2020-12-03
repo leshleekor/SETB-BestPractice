@@ -1,6 +1,7 @@
 package engine;
 
 import java.awt.Insets;
+import java.io.IOException;
 
 import javax.swing.JFrame;
 
@@ -53,7 +54,7 @@ public class Frame extends JFrame {
 	 *            Screen to show.
 	 * @return Return code of the finished screen.
 	 */
-	public final int setScreen(final Screen screen) {
+	public final int setScreen(final Screen screen) throws IOException {
 		currentScreen = screen;
 		currentScreen.initialize();
 		return currentScreen.run();

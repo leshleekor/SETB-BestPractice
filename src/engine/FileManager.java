@@ -172,6 +172,28 @@ public final class FileManager {
 	 * @throws IOException
 	 *             In case of loading problems.
 	 */
+
+	public void deleteScores() throws IOException{
+		InputStream inputStream = null;
+		BufferedReader bufferedReader = null;
+
+		String jarPath = FileManager.class.getProtectionDomain()
+				.getCodeSource().getLocation().getPath();
+		jarPath = URLDecoder.decode(jarPath, "UTF-8");
+
+		String scoresPath = new File(jarPath).getParent();
+
+		scoresPath += File.separator;
+		scoresPath += "scores";
+		File deleteFile = new File(scoresPath);
+		if(deleteFile.exists())
+			deleteFile.delete();
+		else
+			System.out.println("Can't delete the scores file");
+		File newRecodeFile = new File(scoresPath);
+		newRecodeFile.createNewFile();
+	}
+
 	public List<Score> loadHighScores() throws IOException {
 
 		List<Score> highScores = new ArrayList<Score>();
@@ -184,6 +206,7 @@ public final class FileManager {
 			jarPath = URLDecoder.decode(jarPath, "UTF-8");
 
 			String scoresPath = new File(jarPath).getParent();
+
 			scoresPath += File.separator;
 			scoresPath += "scores";
 
