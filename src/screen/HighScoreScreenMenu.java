@@ -1,12 +1,13 @@
 package screen;
 
+
 import engine.Cooldown;
 import engine.Core;
 import engine.GameDifficulty;
 
 import java.awt.event.KeyEvent;
 
-public class DifficultyScreen extends Screen{
+public class HighScoreScreenMenu extends Screen{
     /** Milliseconds between changes in user selection. */
     private static final int SELECTION_TIME = 200;
 
@@ -29,14 +30,14 @@ public class DifficultyScreen extends Screen{
      * @param fps
      *            Frames per second, frame rate at which the game is run.
      */
-    public DifficultyScreen(final int width, final int height, final int fps) {
+    public HighScoreScreenMenu(final int width, final int height, final int fps) {
         super(width, height, fps);
 
         // Defaults to play.
         this.selectionCooldown = Core.getCooldown(SELECTION_TIME);
         this.selectionCooldown.restart();
 
-        // Default return code is Main in difficulty screen
+        // Default return code is Main in High score menu screen
         this.returnCode = ScreenCode.MAIN;
     }
 
@@ -77,18 +78,18 @@ public class DifficultyScreen extends Screen{
                     switch (this.cursorMenuItem){
                         case MENU_EASY:
                             GameDifficulty.setDifficulty(GameDifficulty.EASY);
-                            this.returnCode=ScreenCode.PLAY;
+                            this.returnCode=ScreenCode.HIGH_SCORES;
                             break;
                         case MENU_NORMAL:
                             GameDifficulty.setDifficulty(GameDifficulty.NORMAL);
-                            this.returnCode=ScreenCode.PLAY;
+                            this.returnCode=ScreenCode.HIGH_SCORES;
                             break;
                         case MENU_HARD:
                             GameDifficulty.setDifficulty(GameDifficulty.HARD);
-                            this.returnCode=ScreenCode.PLAY;
+                            this.returnCode=ScreenCode.HIGH_SCORES;
                             break;
                         default:
-                            this.returnCode=ScreenCode.PLAY;
+                            this.returnCode=ScreenCode.HIGH_SCORES;
                             break;
                     }
                     this.isRunning = false;
@@ -131,8 +132,8 @@ public class DifficultyScreen extends Screen{
     private void draw() {
         drawManager.initDrawing(this);
 
-        drawManager.drawTitle(this, "Difficulty Setting", "select with w+s / arrows, confirm with space");
-        drawManager.drawDifficultyMenu(this, this.cursorMenuItem);
+        drawManager.drawTitle(this, "HighScoreScreen", "select with w+s / arrows, confirm with space");
+        drawManager.drawHighScoreScreenMenu(this, this.cursorMenuItem);
 
         drawManager.completeDrawing(this);
     }

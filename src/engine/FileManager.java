@@ -23,6 +23,8 @@ import java.util.logging.Logger;
 
 import engine.DrawManager.SpriteType;
 
+import static engine.GameDifficulty.*;
+
 /**
  * Manages files used in the application.
  * 
@@ -142,8 +144,26 @@ public final class FileManager {
 		BufferedReader reader = null;
 
 		try {
-			inputStream = FileManager.class.getClassLoader()
-					.getResourceAsStream("scores");
+			String message="";
+			if(getDiffculty()==EASY){
+				inputStream = FileManager.class.getClassLoader()
+						.getResourceAsStream("scores");
+			}
+			else if(getDiffculty()==NORMAL){
+				inputStream = FileManager.class.getClassLoader()
+						.getResourceAsStream("scores_normal");
+				message="of Normal Level";
+			}
+			else if(getDiffculty()==HARD){
+				inputStream = FileManager.class.getClassLoader()
+						.getResourceAsStream("scores_hard");
+				message="of Hard Level";
+			}
+			else {
+				inputStream = FileManager.class.getClassLoader()
+						.getResourceAsStream("scores");
+				message="of Easy Level";
+			}
 			reader = new BufferedReader(new InputStreamReader(inputStream));
 
 			Score highScore = null;
@@ -156,6 +176,7 @@ public final class FileManager {
 				name = reader.readLine();
 				score = reader.readLine();
 			}
+			logger.info(message);
 		} finally {
 			if (inputStream != null)
 				inputStream.close();
@@ -185,7 +206,23 @@ public final class FileManager {
 
 			String scoresPath = new File(jarPath).getParent();
 			scoresPath += File.separator;
-			scoresPath += "scores";
+			String message="";
+			if(getDiffculty()==EASY){
+				scoresPath += "scores";
+				message="of Easy Level";
+			}
+			else if(getDiffculty()==NORMAL){
+				scoresPath += "scores_normal";
+				message="of Normal Level";
+			}
+			else if(getDiffculty()==HARD){
+				scoresPath += "scores_hard";
+				message="of Hard Level";
+			}
+			else {
+				scoresPath += "scores";
+				message="of Easy Level";
+			}
 
 			File scoresFile = new File(scoresPath);
 			inputStream = new FileInputStream(scoresFile);
@@ -193,6 +230,7 @@ public final class FileManager {
 					inputStream, Charset.forName("UTF-8")));
 
 			logger.info("Loading user high scores.");
+			logger.info(message);
 
 			Score highScore = null;
 			String name = bufferedReader.readLine();
@@ -238,7 +276,23 @@ public final class FileManager {
 
 			String scoresPath = new File(jarPath).getParent();
 			scoresPath += File.separator;
-			scoresPath += "scores";
+			String message="";
+			if(getDiffculty()==EASY){
+				scoresPath += "scores";
+				message="of Easy Level";
+			}
+			else if(getDiffculty()==NORMAL){
+				scoresPath += "scores_normal";
+				message="of Normal Level";
+			}
+			else if(getDiffculty()==HARD){
+				scoresPath += "scores_hard";
+				message="of Hard Level";
+			}
+			else {
+				scoresPath += "scores";
+				message="of Easy Level";
+			}
 
 			File scoresFile = new File(scoresPath);
 
@@ -250,6 +304,7 @@ public final class FileManager {
 					outputStream, Charset.forName("UTF-8")));
 
 			logger.info("Saving user high scores.");
+			logger.info(message);
 
 			// Saves 7 or less scores.
 			int savedCount = 0;

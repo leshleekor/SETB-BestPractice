@@ -84,8 +84,8 @@ public class TitleScreen extends Screen {
 		else if (this.returnCode == ScreenCode.PLAY)
 			this.returnCode = ScreenCode.DIFFICULTY;
 		else if(this.returnCode == ScreenCode.DIFFICULTY)
-			this.returnCode = ScreenCode.HIGH_SCORES;
-		else if(this.returnCode == ScreenCode.HIGH_SCORES)
+			this.returnCode = ScreenCode.HIGH_SCORES_MENU;  //일단 메뉴로 변경
+		else if(this.returnCode == ScreenCode.HIGH_SCORES_MENU)
 			this.returnCode = ScreenCode.EXIT;
 	}
 
@@ -95,12 +95,12 @@ public class TitleScreen extends Screen {
 	private void previousMenuItem() {
 		if (this.returnCode == ScreenCode.PLAY)
 			this.returnCode = ScreenCode.EXIT;
-		else if(this.returnCode == ScreenCode.HIGH_SCORES)
+		else if(this.returnCode == ScreenCode.HIGH_SCORES_MENU)
 			this.returnCode = ScreenCode.DIFFICULTY;
 		else if(this.returnCode == ScreenCode.DIFFICULTY)
 			this.returnCode = ScreenCode.PLAY;
 		else if(this.returnCode == ScreenCode.EXIT)
-			this.returnCode = ScreenCode.HIGH_SCORES;
+			this.returnCode = ScreenCode.HIGH_SCORES_MENU;
 	}
 
 	/**
