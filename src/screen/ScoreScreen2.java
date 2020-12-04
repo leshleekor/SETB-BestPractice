@@ -13,7 +13,7 @@ import engine.*;
  * @author <a href="mailto:RobertoIA1987@gmail.com">Roberto Izquierdo Amo</a>
  * 
  */
-public class ScoreScreen extends Screen {
+public class ScoreScreen2 extends Screen {
 
 	/** Milliseconds between changes in user selection. */
 	private static final int SELECTION_TIME = 200;
@@ -26,20 +26,27 @@ public class ScoreScreen extends Screen {
 
 	/** Current score. */
 	private int score;
+	private int score2;
 	/** Player lives left. */
 	private int livesRemaining;
+	private int livesRemaining2;
 	/** Total bullets shot by the player. */
 	private int bulletsShot;
+	private int bulletsShot2;
 	/** Total ships destroyed by the player. */
 	private int shipsDestroyed;
+	private int shipsDestroyed2;
 	/** List of past high scores. */
 	private List<Score> highScores;
 	/** Checks if current score is a new high score. */
 	private boolean isNewRecord;
+	private boolean isNewRecord2;
 	/** Player name for record input. */
 	private char[] name;
+	private char[] name2;
 	/** Character of players name selected for change. */
 	private int nameCharSelected;
+	private int nameCharSelected2;
 	/** Time between changes in user selection. */
 	private Cooldown selectionCooldown;
 
@@ -55,17 +62,24 @@ public class ScoreScreen extends Screen {
 	 * @param gameState
 	 *            Current game state.
 	 */
-	public ScoreScreen(final int width, final int height, final int fps,
-					   final GameState gameState) {
+	public ScoreScreen2(final int width, final int height, final int fps,
+					   final GameState gameState, final GameState gameState2) {
 		super(width, height, fps);
 
 		this.score = gameState.getScore();
+		this.score2 = gameState2.getScore();
 		this.livesRemaining = gameState.getLivesRemaining();
+		this.livesRemaining2 = gameState2.getLivesRemaining();
 		this.bulletsShot = gameState.getBulletsShot();
+		this.bulletsShot2 = gameState2.getBulletsShot();
 		this.shipsDestroyed = gameState.getShipsDestroyed();
+		this.shipsDestroyed2 = gameState2.getShipsDestroyed();
 		this.isNewRecord = false;
+		this.isNewRecord2 = false;
 		this.name = "AAA".toCharArray();
+		this.name2 = "AAA".toCharArray();
 		this.nameCharSelected = 0;
+		this.nameCharSelected2 = 0;
 		this.selectionCooldown = Core.getCooldown(SELECTION_TIME);
 		this.selectionCooldown.restart();
 
@@ -75,6 +89,11 @@ public class ScoreScreen extends Screen {
 					|| highScores.get(highScores.size() - 1).getScore()
 					< this.score)
 				this.isNewRecord = true;
+			if (highScores.size() < MAX_HIGH_SCORE_NUM
+					|| highScores.get(highScores.size() - 1).getScore()
+					< this.score2)
+				this.isNewRecord2 = true;
+			
 
 		} catch (IOException e) {
 			logger.warning("Couldn't load high scores!");
@@ -86,7 +105,7 @@ public class ScoreScreen extends Screen {
 	 * 
 	 * @return Next screen code.
 	 */
-	public final int run() throws IOException {
+	public final int run() {
 		super.run();
 
 		return this.returnCode;
@@ -95,7 +114,7 @@ public class ScoreScreen extends Screen {
 	/**
 	 * Updates the elements on screen and checks for events.
 	 */
-	protected final void update() throws IOException {
+	protected final void update() {
 		super.update();
 
 		draw();
@@ -106,12 +125,16 @@ public class ScoreScreen extends Screen {
 				this.isRunning = false;
 				if (this.isNewRecord)
 					saveScore();
+				if(this.isNewRecord2)
+					saveScore2();
 			} else if (inputManager.isKeyDown(KeyEvent.VK_SPACE)) {
 				// Play again.
 				this.returnCode = ScreenCode.PLAY;
 				this.isRunning = false;
 				if (this.isNewRecord)
 					saveScore();
+				if(this.isNewRecord2)
+					saveScore2();
 			}
 
 			if (this.isNewRecord && this.selectionCooldown.checkFinished()) {
@@ -140,6 +163,32 @@ public class ScoreScreen extends Screen {
 					this.selectionCooldown.restart();
 				}
 			}
+			if (this.isNewRecord2 && this.selectionCooldown.checkFinished()) {
+				if (inputManager.isKeyDown(KeyEvent.VK_D)) {
+					this.nameCharSelected2 = this.nameCharSelected2 == 2 ? 0
+							: this.nameCharSelected2 + 1;
+					this.selectionCooldown.restart();
+				}
+				if (inputManager.isKeyDown(KeyEvent.VK_A)) {
+					this.nameCharSelected2 = this.nameCharSelected2 == 0 ? 2
+							: this.nameCharSelected2 - 1;
+					this.selectionCooldown.restart();
+				}
+				if (inputManager.isKeyDown(KeyEvent.VK_W)) {
+					this.name2[this.nameCharSelected2] =
+							(char) (this.name2[this.nameCharSelected2]
+									== LAST_CHAR ? FIRST_CHAR
+							: this.name2[this.nameCharSelected2] + 1);
+					this.selectionCooldown.restart();
+				}
+				if (inputManager.isKeyDown(KeyEvent.VK_S)) {
+					this.name2[this.nameCharSelected2] =
+							(char) (this.name2[this.nameCharSelected2]
+									== FIRST_CHAR ? LAST_CHAR
+							: this.name2[this.nameCharSelected2] - 1);
+					this.selectionCooldown.restart();
+				}
+			}
 		}
 
 	}
@@ -159,22 +208,53 @@ public class ScoreScreen extends Screen {
 			logger.warning("Couldn't load high scores!");
 		}
 	}
+	
+	private void saveScore2() {
+		highScores.add(new Score(new String(this.name2), score2));
+		Collections.sort(highScores);
+		if (highScores.size() > MAX_HIGH_SCORE_NUM)
+			highScores.remove(highScores.size() - 1);
+
+		try {
+			Core.getFileManager().saveHighScores(highScores);
+		} catch (IOException e) {
+			logger.warning("Couldn't load high scores!");
+		}
+	}
 
 	/**
 	 * Draws the elements associated with the screen.
 	 */
 	private void draw() {
-		drawManager.initDrawing(this);
+			drawManager.initDrawing(this);
+			
+			if(this.bulletsShot==0) {
+				this.bulletsShot=1;
+			}
+			if(this.bulletsShot2==0) {
+				this.bulletsShot2=1;
+			}
 
-		drawManager.drawGameOver(this, this.inputDelay.checkFinished(),
-				this.isNewRecord);
-		drawManager.drawResults(this, this.score, this.livesRemaining,
-				this.shipsDestroyed, (float) this.shipsDestroyed
-						/ this.bulletsShot, this.isNewRecord);
+			drawManager.drawResults2(this, this.score, this.score2, this.livesRemaining, this.livesRemaining2,
+					this.shipsDestroyed, this.shipsDestroyed2, (float) this.shipsDestroyed/ this.bulletsShot, 
+					(float)this.shipsDestroyed2/this.bulletsShot2, this.isNewRecord, this.isNewRecord2);
 
-		if (this.isNewRecord)
-			drawManager.drawNameInput(this, this.name, this.nameCharSelected);
+			if (this.isNewRecord && this.isNewRecord2){//둘다 신기록일때
+				drawManager.drawNameInput2(this, this.name, this.nameCharSelected, this.name2, this.nameCharSelected2);
+			    drawManager.drawGameOver(this, this.inputDelay.checkFinished(),	this.isNewRecord);}
+			else if(this.isNewRecord) {//1P가 신기록일때 
+				drawManager.drawNameInputgreen(this, this.name, this.nameCharSelected);
+				drawManager.drawGameOver(this, this.inputDelay.checkFinished(),	this.isNewRecord);				
+			}
+			else if(this.isNewRecord2) {//2P가 신기록일때 
+				drawManager.drawNameInputblue(this, this.name2, this.nameCharSelected2);
+				drawManager.drawGameOver(this, this.inputDelay.checkFinished(),	this.isNewRecord2);				
+			}
+			else {
+				drawManager.drawGameOver(this, this.inputDelay.checkFinished(),	this.isNewRecord);
+			}
 
-		drawManager.completeDrawing(this);
-	}
+			drawManager.completeDrawing(this);
+		}
 }
+

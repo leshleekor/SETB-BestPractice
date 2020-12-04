@@ -65,7 +65,6 @@ public class GameDifficulty {
                 levelSettingsList.add(new LevelSettings(7, 7, 10, 400));
                 /** Difficulty settings for level 1. */
                 levelSettingsList.add(new LevelSettings(8, 7, 5, 200));
-
                 break;
             default:
                 break;

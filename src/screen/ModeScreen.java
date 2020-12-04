@@ -2,23 +2,20 @@ package screen;
 
 import engine.Cooldown;
 import engine.Core;
-import engine.GameDifficulty;
+import engine.GameMode;
 
 import java.awt.event.KeyEvent;
-import java.io.IOException;
 
-
-public class DifficultyScreen extends Screen{
+public class ModeScreen extends Screen{
     /** Milliseconds between changes in user selection. */
     private static final int SELECTION_TIME = 200;
 
     /** Time between changes in user selection. */
     private Cooldown selectionCooldown;
 
-    private int cursorMenuItem;
-    public static final int MENU_EASY = 0;
-    public static final int MENU_NORMAL = 1;
-    public static final int MENU_HARD = 2;
+    private int cursorMenuItem=1;
+    public static final int P1 = 1;
+    public static final int P2 = 2;
     public static final int MENU_BACK = 3;
 
     /**
@@ -31,14 +28,14 @@ public class DifficultyScreen extends Screen{
      * @param fps
      *            Frames per second, frame rate at which the game is run.
      */
-    public DifficultyScreen(final int width, final int height, final int fps) {
+    public ModeScreen(final int width, final int height, final int fps) {
         super(width, height, fps);
 
         // Defaults to play.
         this.selectionCooldown = Core.getCooldown(SELECTION_TIME);
         this.selectionCooldown.restart();
 
-        // Default return code is Main in difficulty screen
+        // Default return code is Main in Mode screen
         this.returnCode = ScreenCode.MAIN;
     }
 
@@ -47,8 +44,7 @@ public class DifficultyScreen extends Screen{
      *
      * @return Next screen code.
      */
-    public final int run() throws IOException {
-
+    public final int run() {
         super.run();
 
         return this.returnCode;
@@ -57,7 +53,7 @@ public class DifficultyScreen extends Screen{
     /**
      * Updates the elements on screen and checks for events.
      */
-    protected final void update() throws IOException {
+    protected final void update() {
         super.update();
 
         draw();
@@ -78,20 +74,16 @@ public class DifficultyScreen extends Screen{
                     this.isRunning = false;
                 }else{
                     switch (this.cursorMenuItem){
-                        case MENU_EASY:
-                            GameDifficulty.setDifficulty(GameDifficulty.EASY);
+                        case P1:
+                            GameMode.setGameMode(GameMode.P1);
                             break;
-                        case MENU_NORMAL:
-                            GameDifficulty.setDifficulty(GameDifficulty.NORMAL);
-                            break;
-                        case MENU_HARD:
-                            GameDifficulty.setDifficulty(GameDifficulty.HARD);
+                        case P2:
+                            GameMode.setGameMode(GameMode.P2);
                             break;
                         default:
                             break;
                     }
-//                    this.isRunning = false;
-
+                    this.isRunning = false;
                 }
             }
         }
@@ -101,28 +93,24 @@ public class DifficultyScreen extends Screen{
      * Shifts the focus to the next menu item.
      */
     private void nextMenuItem() {
-        if (this.cursorMenuItem == MENU_EASY)
-            this.cursorMenuItem = MENU_NORMAL;
-        else if(this.cursorMenuItem == MENU_NORMAL)
-            this.cursorMenuItem = MENU_HARD;
-        else if(this.cursorMenuItem == MENU_HARD)
+        if (this.cursorMenuItem == P1)
+            this.cursorMenuItem = P2;
+        else if(this.cursorMenuItem == P2)
             this.cursorMenuItem = MENU_BACK;
         else if(this.cursorMenuItem == MENU_BACK)
-            this.cursorMenuItem = MENU_EASY;
+            this.cursorMenuItem = P1;
     }
 
     /**
      * Shifts the focus to the previous menu item.
      */
     private void previousMenuItem() {
-        if (this.cursorMenuItem == MENU_NORMAL)
-            this.cursorMenuItem = MENU_EASY;
-        else if(this.cursorMenuItem == MENU_HARD)
-            this.cursorMenuItem = MENU_NORMAL;
-        else if(this.cursorMenuItem == MENU_BACK)
-            this.cursorMenuItem = MENU_HARD;
-        else if(this.cursorMenuItem == MENU_EASY)
+        if (this.cursorMenuItem == P2)
+            this.cursorMenuItem = P1;
+        else if(this.cursorMenuItem == P1)
             this.cursorMenuItem = MENU_BACK;
+        else if(this.cursorMenuItem == MENU_BACK)
+            this.cursorMenuItem = P2;
     }
 
     /**
@@ -131,8 +119,8 @@ public class DifficultyScreen extends Screen{
     private void draw() {
         drawManager.initDrawing(this);
 
-        drawManager.drawTitle(this, "Difficulty Setting", "select with w+s / arrows, confirm with space");
-        drawManager.drawDifficultyMenu(this, this.cursorMenuItem);
+        drawManager.drawTitle(this, "Mode Setting", "select with w+s / arrows, confirm with space");
+        drawManager.drawModeMenu(this, this.cursorMenuItem);
 
         drawManager.completeDrawing(this);
     }

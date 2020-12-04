@@ -17,6 +17,7 @@ public class Bullet extends Entity {
 	 * positive is down.
 	 */
 	private int speed;
+	private int owner;
 
 	/**
 	 * Constructor, establishes the bullet's properties.
@@ -29,11 +30,15 @@ public class Bullet extends Entity {
 	 *            Speed of the bullet, positive or negative depending on
 	 *            direction - positive is down.
 	 */
-	public Bullet(final int positionX, final int positionY, final int speed) {
+	public Bullet(final int positionX, final int positionY, final int speed, final int owner) {
 		super(positionX, positionY, 3 * 2, 5 * 2, Color.WHITE);
-
+		this.owner = owner;
 		this.speed = speed;
 		setSprite();
+	}
+	
+	public int getOwner() {
+		return this.owner;
 	}
 
 	/**
@@ -72,3 +77,4 @@ public class Bullet extends Entity {
 		return this.speed;
 	}
 }
+

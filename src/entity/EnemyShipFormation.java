@@ -25,7 +25,7 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 	/** Initial position in the x-axis. */
 	private static final int INIT_POS_X = 20;
 	/** Initial position in the x-axis. */
-	private static final int INIT_POS_Y = 100;
+	private static final int INIT_POS_Y = 140;
 	/** Distance between ships. */
 	private static final int SEPARATION_DISTANCE = 40;
 	/** Proportion of C-type ships. */
@@ -338,7 +338,7 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 		if (this.shootingCooldown.checkFinished()) {
 			this.shootingCooldown.restart();
 			bullets.add(BulletPool.getBullet(shooter.getPositionX()
-					+ shooter.width / 2, shooter.getPositionY(), BULLET_SPEED));
+					+ shooter.width / 2, shooter.getPositionY(), BULLET_SPEED, 3));
 		}
 	}
 
@@ -427,3 +427,4 @@ public class EnemyShipFormation implements Iterable<EnemyShip> {
 		return this.shipCount <= 0;
 	}
 }
+

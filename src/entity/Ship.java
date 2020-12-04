@@ -22,6 +22,8 @@ public class Ship extends Entity {
 	/** Movement of the ship for each unit of time. */
 	private static final int SPEED = 2;
 	
+	private int player;
+	
 	/** Minimum time between shots. */
 	private Cooldown shootingCooldown;
 	/** Time spent inactive between hits. */
@@ -35,12 +37,13 @@ public class Ship extends Entity {
 	 * @param positionY
 	 *            Initial position of the ship in the Y axis.
 	 */
-	public Ship(final int positionX, final int positionY) {
-		super(positionX, positionY, 13 * 2, 8 * 2, Color.GREEN);
+	public Ship(final int positionX, final int positionY, Color color, final int player) {
+		super(positionX, positionY, 13 * 2, 8 * 2, color);
 
 		this.spriteType = SpriteType.Ship;
 		this.shootingCooldown = Core.getCooldown(SHOOTING_INTERVAL);
 		this.destructionCooldown = Core.getCooldown(1000);
+		this.player = player;
 	}
 
 	/**
@@ -70,7 +73,7 @@ public class Ship extends Entity {
 		if (this.shootingCooldown.checkFinished()) {
 			this.shootingCooldown.restart();
 			bullets.add(BulletPool.getBullet(positionX + this.width / 2,
-					positionY, BULLET_SPEED));
+					positionY, BULLET_SPEED, this.player));
 			return true;
 		}
 		return false;
@@ -111,3 +114,4 @@ public class Ship extends Entity {
 		return SPEED;
 	}
 }
+
