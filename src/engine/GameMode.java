@@ -10,16 +10,6 @@ public class GameMode {
 
     public static void setGameMode(int gameMode){
         GameMode.selectedGameMode = gameMode;
-        switch (GameMode.selectedGameMode){
-            case P1:
-
-                break;
-            case P2:
-
-                break;
-            default:
-                break;
-        }
         Core.setModeSettings(gameMode);
     }
 }
