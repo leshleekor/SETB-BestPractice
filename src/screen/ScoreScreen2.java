@@ -105,7 +105,7 @@ public class ScoreScreen2 extends Screen {
 	 * 
 	 * @return Next screen code.
 	 */
-	public final int run() {
+	public final int run() throws IOException {
 		super.run();
 
 		return this.returnCode;
@@ -114,7 +114,7 @@ public class ScoreScreen2 extends Screen {
 	/**
 	 * Updates the elements on screen and checks for events.
 	 */
-	protected final void update() {
+	protected final void update() throws IOException {
 		super.update();
 
 		draw();

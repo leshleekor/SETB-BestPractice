@@ -1,5 +1,6 @@
-package engine;
+package test.engine;
 
+import engine.GameMode;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
