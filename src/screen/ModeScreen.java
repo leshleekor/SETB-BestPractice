@@ -5,6 +5,7 @@ import engine.Core;
 import engine.GameMode;
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 public class ModeScreen extends Screen{
     /** Milliseconds between changes in user selection. */
@@ -44,7 +45,7 @@ public class ModeScreen extends Screen{
      *
      * @return Next screen code.
      */
-    public final int run() {
+    public final int run() throws IOException {
         super.run();
 
         return this.returnCode;
@@ -53,7 +54,7 @@ public class ModeScreen extends Screen{
     /**
      * Updates the elements on screen and checks for events.
      */
-    protected final void update() {
+    protected final void update() throws IOException {
         super.update();
 
         draw();
