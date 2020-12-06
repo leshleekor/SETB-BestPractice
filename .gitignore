@@ -1,7 +1,9 @@
 #################
 ## Eclipse
 #################
-
+.idea/
+lib/
+out/
 *.pydevproject
 .project
 .metadata
