@@ -7,6 +7,7 @@ import engine.GameDifficulty;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 
+
 public class DifficultyScreen extends Screen{
     /** Milliseconds between changes in user selection. */
     private static final int SELECTION_TIME = 200;
@@ -47,6 +48,7 @@ public class DifficultyScreen extends Screen{
      * @return Next screen code.
      */
     public final int run() throws IOException {
+
         super.run();
 
         return this.returnCode;
@@ -88,6 +90,8 @@ public class DifficultyScreen extends Screen{
                         default:
                             break;
                     }
+//                    this.isRunning = false;
+
                 }
             }
         }

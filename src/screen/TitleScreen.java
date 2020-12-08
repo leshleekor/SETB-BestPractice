@@ -9,21 +9,21 @@ import engine.GameDifficulty;
 
 /**
  * Implements the title screen.
- * 
+ *
  * @author <a href="mailto:RobertoIA1987@gmail.com">Roberto Izquierdo Amo</a>
- * 
+ *
  */
 public class TitleScreen extends Screen {
 
 	/** Milliseconds between changes in user selection. */
 	private static final int SELECTION_TIME = 200;
-	
+
 	/** Time between changes in user selection. */
 	private Cooldown selectionCooldown;
 
 	/**
 	 * Constructor, establishes the properties of the screen.
-	 * 
+	 *
 	 * @param width
 	 *            Screen width.
 	 * @param height
@@ -42,7 +42,7 @@ public class TitleScreen extends Screen {
 
 	/**
 	 * Starts the action.
-	 * 
+	 *
 	 * @return Next screen code.
 	 */
 	public final int run() throws IOException {
@@ -83,6 +83,8 @@ public class TitleScreen extends Screen {
 		if (this.returnCode == ScreenCode.EXIT)
 			this.returnCode = ScreenCode.PLAY;
 		else if (this.returnCode == ScreenCode.PLAY)
+			this.returnCode = ScreenCode.PLAYERMODE;
+		else if (this.returnCode == ScreenCode.PLAYERMODE)
 			this.returnCode = ScreenCode.DIFFICULTY;
 		else if(this.returnCode == ScreenCode.DIFFICULTY)
 			this.returnCode = ScreenCode.HIGH_SCORES;
@@ -99,6 +101,8 @@ public class TitleScreen extends Screen {
 		else if(this.returnCode == ScreenCode.HIGH_SCORES)
 			this.returnCode = ScreenCode.DIFFICULTY;
 		else if(this.returnCode == ScreenCode.DIFFICULTY)
+			this.returnCode = ScreenCode.PLAYERMODE;
+		else if(this.returnCode == ScreenCode.PLAYERMODE)
 			this.returnCode = ScreenCode.PLAY;
 		else if(this.returnCode == ScreenCode.EXIT)
 			this.returnCode = ScreenCode.HIGH_SCORES;

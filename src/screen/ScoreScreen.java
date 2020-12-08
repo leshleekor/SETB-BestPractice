@@ -102,13 +102,13 @@ public class ScoreScreen extends Screen {
 		if (this.inputDelay.checkFinished()) {
 			if (inputManager.isKeyDown(KeyEvent.VK_ESCAPE)) {
 				// Return to main menu.
-				this.returnCode = 1;
+				this.returnCode = ScreenCode.MAIN;
 				this.isRunning = false;
 				if (this.isNewRecord)
 					saveScore();
 			} else if (inputManager.isKeyDown(KeyEvent.VK_SPACE)) {
 				// Play again.
-				this.returnCode = 2;
+				this.returnCode = ScreenCode.PLAY;
 				this.isRunning = false;
 				if (this.isNewRecord)
 					saveScore();
