@@ -37,10 +37,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8d3ddbb-6af3-49cc-b8ee-04e78668e05a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/engine/GameDifficultyTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/engine/LevelSettingsTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/engine/ScoreTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/DifficultyScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -175,28 +173,29 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607422903837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607422903837" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607423102458">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607423284931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423102458" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607423102457">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423284931" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607423284931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423102457" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607423102457">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423284931" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607423284931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423102457" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607423102457">
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423284931" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607423284931">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423102457" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607423284931" />
     <state x="665" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607419739817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
