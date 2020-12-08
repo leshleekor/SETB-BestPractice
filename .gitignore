@@ -15,7 +15,6 @@ local.properties
 .classpath
 .settings/
 .loadpath
-.out/
 SETB-BestPractice.iml
 
 # External tool builders
