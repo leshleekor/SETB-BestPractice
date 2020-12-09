@@ -1,19 +1,24 @@
 package screen;
 
 
+import engine.Cooldown;
 import engine.Core;
 import engine.GameState;
 import engine.LevelSettings;
+import entity.Bullet;
+import entity.EnemyShip;
+import entity.EnemyShipFormation;
 import entity.Ship;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class GameScreenTest {
+class GameScreenTest{
     static GameScreen gs;
 
     @BeforeAll
@@ -45,7 +50,6 @@ class GameScreenTest {
         assertEquals(ship.getHeight(), 16);
     }
 
-
     @Test
     void run() throws IOException {
         gs.initialize();
@@ -55,7 +59,9 @@ class GameScreenTest {
         }
     }
 
-    @Test void update() throws IOException {
+    @Test
+    void update() throws IOException {
+        gs.update();
 
     }
 
