@@ -324,8 +324,14 @@ public final class DrawManager {
 				break;
 		}
 		backBufferGraphics.setColor(Color.GRAY);
-		drawCenteredRegularString(screen, instructionsString,
-				screen.getHeight() / 2 );
+		if(instructions=="Press Space to return"){
+			drawCenteredRegularString(screen, instructionsString,
+					screen.getHeight() / 5 );
+		}
+		else{
+			drawCenteredRegularString(screen, instructionsString,
+					screen.getHeight() / 2 );
+		}
 		backBufferGraphics.setColor(Color.YELLOW);
 		drawCenteredRegularString(screen, difficultyString,
 				screen.getHeight() / 3 );
