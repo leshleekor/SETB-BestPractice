@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SETB-BestPractice.iml" filepath="$PROJECT_DIR$/SETB-BestPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SETB-BestPractice.iml" filepath="$PROJECT_DIR$/.idea/modules/SETB-BestPractice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SETB-BestPractice.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SETB-BestPractice.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SETB-BestPractice.test.iml" filepath="$PROJECT_DIR$/.idea/modules/SETB-BestPractice.test.iml" />
     </modules>
   </component>
 </project>
