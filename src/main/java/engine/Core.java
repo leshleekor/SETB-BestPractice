@@ -1,16 +1,12 @@
 package engine;
 
+import screen.*;
+import screen.ScreenCode;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.ConsoleHandler;
-import java.util.logging.FileHandler;
-import java.util.logging.Handler;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import screen.ScreenCode;
-import screen.*;
+import java.util.logging.*;
 
 /**
  * Implements core game logic.
@@ -268,7 +264,7 @@ public final class Core {
 	 * @return A new cooldown with variance.
 	 */
 	public static Cooldown getVariableCooldown(final int milliseconds,
-			final int variance) {
+                                               final int variance) {
 		return new Cooldown(milliseconds, variance);
 	}
 	public static void setLevelSettings(ArrayList<LevelSettings> levelSettingsArrayList){

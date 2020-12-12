@@ -1,138 +1,205 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
-  <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:test" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:features" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:test" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
-    <select />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="b8d3ddbb-6af3-49cc-b8ee-04e78668e05a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+    <list default="true" id="70745cfa-1df6-409e-95f4-ad30a5cfc7fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.5/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SETB-BestPractice.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SETB.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invaders.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/apiguardian-api-1.0.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-api-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-jupiter-params-5.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-commons-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/junit-platform-engine-1.4.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.1.1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.1.1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/opentest4j-1.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/Cooldown.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/Core.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/DrawManager$SpriteType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/DrawManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/FileManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/Frame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/GameDifficulty.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/GameMode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/GameState.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/InputManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/LevelSettings.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/MinimalFormatter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/engine/Score.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/Bullet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/BulletPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/EnemyShip$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/EnemyShip.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/EnemyShipFormation$Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/EnemyShipFormation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/entity/Ship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/DifficultyScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/GameScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/HighScoreScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/ModeScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/ScoreScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/Screen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/ScreenCode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/SETB-BestPractice/screen/TitleScreen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/scores" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/Cooldown.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/Core.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/DrawManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/FileManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/Frame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/GameDifficulty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/GameMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/LevelSettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Bullet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/BulletPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/EnemyShip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/EnemyShipFormation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/Core.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Core.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/DrawManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/DrawManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/FileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/FileManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/Frame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/Frame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/GameDifficulty.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/GameDifficulty.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Bullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/BulletPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/BulletPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/EnemyShip.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/EnemyShip.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/EnemyShipFormation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/EnemyShipFormation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Entity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Entity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Ship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Ship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/DifficultyScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/DifficultyScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/GameScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/GameScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/HighScoreScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/HighScoreScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/ScoreScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/ScoreScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/ScoreScreen2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/ScoreScreen2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/Screen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/Screen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/screen/TitleScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/screen/TitleScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/DifficultyScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/GameScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/HighScoreScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ModeScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ScoreScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ScoreScreen2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/Screen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ScreenCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/TitleScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/engine/DrawManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/engine/GameModeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/engine/GameStateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/engine/GameDifficultyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/engine/GameDifficultyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/engine/GameModeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/engine/GameModeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/engine/GameStateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/engine/GameStateTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/engine/LevelSettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/engine/LevelSettingsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/engine/ScoreTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/engine/ScoreTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screen/DifficultyScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screen/HighScoreScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screen/ModeScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/screen/ScoreScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/DifficultyScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/HighScoreScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/ModeScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/ScoreScreenTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JUnit5 Test Class" />
-      </list>
-    </option>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.3\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
   </component>
-  <component name="ProjectId" id="1lMv5wtiU6v2DAp64smjc9qVtAU" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="1lYoY8eTzR2FWjAzuPIKrPrKn43" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.RecentsKey">
-      <recent name="engine" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\SeungHyeon\IdeaProjects\SETB-BestPractice\test" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+      <recent name="$PROJECT_DIR$/src/test/java" />
+      <recent name="$PROJECT_DIR$/src/main/java" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Core">
-    <configuration name="LevelSettingsTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SETB-BestPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="engine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="engine" />
-      <option name="MAIN_CLASS_NAME" value="engine.LevelSettingsTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ScoreTest.TestGetScore_ShouldReturnCurrentScore" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SETB-BestPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="engine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="engine" />
-      <option name="MAIN_CLASS_NAME" value="engine.ScoreTest" />
-      <option name="METHOD_NAME" value="TestGetScore_ShouldReturnCurrentScore" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.Tests in 'SETB-BestPractice.test'">
     <configuration name="Core" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="engine.Core" />
       <module name="SETB-BestPractice.main" />
@@ -146,81 +213,180 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SETB-BestPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="engine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="engine" />
-      <option name="MAIN_CLASS_NAME" value="engine.ScoreTest" />
-      <option name="TEST_OBJECT" value="class" />
+    <configuration name="GameDifficultyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;engine.GameDifficultyTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="GameStateTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;engine.GameStateTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="LevelSettingsTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;engine.LevelSettingsTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'SETB-BestPractice.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":cleanTest" />
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <module name="SETB-BestPractice-1" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <module name="SETB-BestPractice-1" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'SETB-BestPractice.test'" />
         <item itemvalue="Application.Core" />
-        <item itemvalue="JUnit.ScoreTest" />
-        <item itemvalue="Android JUnit.ScoreTest.TestGetScore_ShouldReturnCurrentScore" />
-        <item itemvalue="Android JUnit.LevelSettingsTest" />
+        <item itemvalue="Gradle.GameDifficultyTest" />
+        <item itemvalue="Gradle.LevelSettingsTest" />
+        <item itemvalue="Gradle.GameStateTest" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b8d3ddbb-6af3-49cc-b8ee-04e78668e05a" name="Default Changelist" comment="" />
-      <created>1607419595177</created>
+      <changelist id="70745cfa-1df6-409e-95f4-ad30a5cfc7fc" name="Default Changelist" comment="" />
+      <created>1607783430059</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1607419595177</updated>
+      <updated>1607783430059</updated>
+      <workItem from="1607783434200" duration="853000" />
     </task>
     <servers />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="oldMeFiltersMigrated" value="true" />
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607422903837">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="646" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607784141593">
+      <screen x="0" y="23" width="1920" height="1125" />
     </state>
-    <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607422903837" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607763960081">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="646" y="111" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1125@0.23.1920.1125" timestamp="1607784141593" />
+    <state width="1188" height="345" key="GridCell.Tab.0.bottom" timestamp="1607784250740">
+      <screen x="0" y="23" width="1920" height="1125" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960081" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607763960081">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1188" height="345" key="GridCell.Tab.0.bottom/0.23.1920.1125@0.23.1920.1125" timestamp="1607784250740" />
+    <state width="1188" height="345" key="GridCell.Tab.0.center" timestamp="1607784250739">
+      <screen x="0" y="23" width="1920" height="1125" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960081" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607763960080">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1188" height="345" key="GridCell.Tab.0.center/0.23.1920.1125@0.23.1920.1125" timestamp="1607784250739" />
+    <state width="1188" height="345" key="GridCell.Tab.0.left" timestamp="1607784250739">
+      <screen x="0" y="23" width="1920" height="1125" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960080" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607763960081">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1188" height="345" key="GridCell.Tab.0.left/0.23.1920.1125@0.23.1920.1125" timestamp="1607784250739" />
+    <state width="1188" height="345" key="GridCell.Tab.0.right" timestamp="1607784250739">
+      <screen x="0" y="23" width="1920" height="1125" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960081" />
-    <state x="665" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607419739817">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="665" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607419739817" />
-    <state x="731" y="311" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1607419804830">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="731" y="311" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607419804830" />
+    <state width="1188" height="345" key="GridCell.Tab.0.right/0.23.1920.1125@0.23.1920.1125" timestamp="1607784250739" />
   </component>
 </project>

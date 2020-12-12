@@ -1,11 +1,14 @@
 package screen;
 
+import engine.Cooldown;
+import engine.Core;
+import engine.GameState;
+import engine.Score;
+
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.Collections;
 import java.util.List;
-
-import engine.*;
 
 /**
  * Implements the score screen.
@@ -63,7 +66,7 @@ public class ScoreScreen2 extends Screen {
 	 *            Current game state.
 	 */
 	public ScoreScreen2(final int width, final int height, final int fps,
-					   final GameState gameState, final GameState gameState2) {
+                        final GameState gameState, final GameState gameState2) {
 		super(width, height, fps);
 
 		this.score = gameState.getScore();

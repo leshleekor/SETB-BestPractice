@@ -1,18 +1,9 @@
 package engine;
 
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
+import engine.DrawManager.SpriteType;
+
+import java.awt.*;
+import java.io.*;
 import java.net.URLDecoder;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
@@ -20,8 +11,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
-
-import engine.DrawManager.SpriteType;
 
 /**
  * Manages files used in the application.
@@ -110,7 +99,7 @@ public final class FileManager {
 	 *             In case of incorrect font format.
 	 */
 	public Font loadFont(final float size) throws IOException,
-			FontFormatException {
+            FontFormatException {
 		InputStream inputStream = null;
 		Font font;
 
@@ -173,7 +162,7 @@ public final class FileManager {
 	 *             In case of loading problems.
 	 */
 
-	public void deleteScores() throws IOException{
+	public void deleteScores() throws IOException {
 		InputStream inputStream = null;
 		BufferedReader bufferedReader = null;
 
@@ -249,7 +238,7 @@ public final class FileManager {
 	 * @throws IOException
 	 *             In case of loading problems.
 	 */
-	public void saveHighScores(final List<Score> highScores) 
+	public void saveHighScores(final List<Score> highScores)
 			throws IOException {
 		OutputStream outputStream = null;
 		BufferedWriter bufferedWriter = null;

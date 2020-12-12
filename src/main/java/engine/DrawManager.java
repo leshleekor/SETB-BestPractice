@@ -1,23 +1,19 @@
 package engine;
 
-import java.awt.Color;
-import java.awt.Font;
-import java.awt.FontFormatException;
-import java.awt.FontMetrics;
-import java.awt.Graphics;
+import entity.Entity;
+import entity.Ship;
+import screen.DifficultyScreen;
+import screen.ModeScreen;
+import screen.Screen;
+import screen.ScreenCode;
+
+import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
-import screen.GameScreen;
-import screen.DifficultyScreen;
-import screen.ModeScreen;
-import screen.ScreenCode;
-import screen.Screen;
-import entity.Entity;
-import entity.Ship;
 
 /**
  * Manages screen drawing.
@@ -889,7 +885,7 @@ public final class DrawManager {
 	 *            Height of the drawing.
 	 */
 	public void drawCenteredRegularString(final Screen screen,
-			final String string, final int height) {
+                                          final String string, final int height) {
 		backBufferGraphics.setFont(fontRegular);
 		backBufferGraphics.drawString(string, screen.getWidth() / 2
 				- fontRegularMetrics.stringWidth(string) / 2, height);

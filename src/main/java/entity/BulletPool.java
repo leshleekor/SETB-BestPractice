@@ -35,7 +35,7 @@ public final class BulletPool {
 	 * @return Requested bullet.
 	 */
 	public static Bullet getBullet(final int positionX,
-			final int positionY, final int speed, final int owner) {
+                                   final int positionY, final int speed, final int owner) {
 		Bullet bullet;
 		if (!pool.isEmpty()) {
 			bullet = pool.iterator().next();

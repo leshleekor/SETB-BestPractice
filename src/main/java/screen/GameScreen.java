@@ -1,18 +1,13 @@
 package screen;
 
+import engine.*;
+import entity.*;
+
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
-
-import engine.*;
-import entity.Bullet;
-import entity.BulletPool;
-import entity.EnemyShip;
-import entity.EnemyShipFormation;
-import entity.Entity;
-import entity.Ship;
 
 /**
  * Implements the game screen, where the action happens.
@@ -92,8 +87,8 @@ public class GameScreen extends Screen {
     *            Frames per second, frame rate at which the game is run.
     */
    public GameScreen(final GameState gameState, final GameState gameState2,
-                 final LevelSettings levelSettings, final boolean bonusLife,
-                 final int width, final int height, final int fps) {
+                     final LevelSettings levelSettings, final boolean bonusLife,
+                     final int width, final int height, final int fps) {
       super(width, height, fps);
 
       this.levelSettings = levelSettings;

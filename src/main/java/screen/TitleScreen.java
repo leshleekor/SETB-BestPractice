@@ -1,11 +1,10 @@
 package screen;
 
-import java.awt.event.KeyEvent;
-import java.io.IOException;
-
 import engine.Cooldown;
 import engine.Core;
-import engine.GameDifficulty;
+
+import java.awt.event.KeyEvent;
+import java.io.IOException;
 
 /**
  * Implements the title screen.
