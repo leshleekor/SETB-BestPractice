@@ -9,7 +9,7 @@ class GameDifficultyTest {
     @Test
     void TestGetDifficulty_ShouldReturnInvalidDifficulty()
     {
-        assertFalse(GameDifficulty.getDiffculty() == GameDifficulty.EASY ||
+        assertTrue(GameDifficulty.getDiffculty() == GameDifficulty.EASY ||
                 GameDifficulty.getDiffculty() == GameDifficulty.NORMAL ||
                 GameDifficulty.getDiffculty() == GameDifficulty.HARD, "getDifficulty should return valid difficulty");
     }

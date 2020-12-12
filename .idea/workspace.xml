@@ -11,11 +11,6 @@
       </path>
       <path>
         <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:test" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
         <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
       </path>
       <path>
@@ -41,13 +36,75 @@
   <component name="ChangeListManager">
     <list default="true" id="b8d3ddbb-6af3-49cc-b8ee-04e78668e05a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileContent/fileContent.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invaders.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/res/scores" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/Cooldown.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/Core.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/DrawManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/FileManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/Frame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/GameDifficulty.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/GameMode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/engine/LevelSettings.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Bullet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/BulletPool.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/EnemyShip.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/EnemyShipFormation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/entity/Ship.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/DifficultyScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/GameScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/HighScoreScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ModeScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ScoreScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ScoreScreen2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/Screen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/ScreenCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/screen/TitleScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/engine/DrawManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/engine/GameModeTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/engine/GameStateTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/engine/GameDifficultyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/engine/GameDifficultyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/DifficultyScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/HighScoreScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/ModeScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/screen/ScoreScreenTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/engine/GameDifficultyTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/engine/LevelSettingsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/engine/ScoreTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view />
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,10 +140,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -96,38 +153,23 @@
       <recent name="" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\SeungHyeon\IdeaProjects\test\SETB-BestPractice\src\test\java" />
+      <recent name="C:\Users\SeungHyeon\IdeaProjects\test\SETB-BestPractice\src\entity" />
       <recent name="C:\Users\SeungHyeon\IdeaProjects\SETB-BestPractice\test" />
     </key>
   </component>
   <component name="RunManager" selected="Application.Core">
-    <configuration name="LevelSettingsTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SETB-BestPractice" />
+    <configuration name="DifficultyScreenTest" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SETB-BestPractice.test" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="engine.*" />
+          <option name="PATTERN" value="screen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="engine" />
-      <option name="MAIN_CLASS_NAME" value="engine.LevelSettingsTest" />
+      <option name="PACKAGE_NAME" value="screen" />
+      <option name="MAIN_CLASS_NAME" value="screen.DifficultyScreenTest" />
       <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ScoreTest.TestGetScore_ShouldReturnCurrentScore" type="AndroidJUnit" factoryName="Android JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SETB-BestPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="engine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="engine" />
-      <option name="MAIN_CLASS_NAME" value="engine.ScoreTest" />
-      <option name="METHOD_NAME" value="TestGetScore_ShouldReturnCurrentScore" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -146,27 +188,75 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ScoreTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="SETB-BestPractice" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="engine.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="engine" />
-      <option name="MAIN_CLASS_NAME" value="engine.ScoreTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
+    <configuration name="GameDifficultyTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests &quot;engine.GameDifficultyTest&quot;" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
     </configuration>
+    <configuration name="SETB-BestPractice" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list />
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests in 'SETB-BestPractice.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--tests *" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" value="" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>false</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Android JUnit.DifficultyScreenTest" />
+      <item itemvalue="Gradle.GameDifficultyTest" />
+      <item itemvalue="Gradle.Tests in 'SETB-BestPractice.test'" />
+      <item itemvalue="Gradle.SETB-BestPractice" />
+      <item itemvalue="Application.Core" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.Core" />
-        <item itemvalue="JUnit.ScoreTest" />
-        <item itemvalue="Android JUnit.ScoreTest.TestGetScore_ShouldReturnCurrentScore" />
-        <item itemvalue="Android JUnit.LevelSettingsTest" />
+        <item itemvalue="Android JUnit.DifficultyScreenTest" />
+        <item itemvalue="Gradle.SETB-BestPractice" />
+        <item itemvalue="Gradle.Tests in 'SETB-BestPractice.test'" />
+        <item itemvalue="Gradle.GameDifficultyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -194,26 +284,46 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="440" y="94" key="#Project_Structure" timestamp="1607781663416">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="#Project_Structure/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607781663416" />
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607781174993">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607781174993" />
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1607422903837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="92" y="92" width="1736" height="856" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607422903837" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607763960081">
+    <state x="711" y="320" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1607780657370">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960081" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607763960081">
+    <state x="711" y="320" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607780657370" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607781258389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960081" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607763960080">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607781258389" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607769048427" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607781258389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960080" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607763960081">
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607781258389" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607769048427" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607781258389">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607763960081" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607781258389" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607769048426" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607781258389">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607781258389" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1607769048427" />
+    <state x="430" y="189" key="SettingsEditor" timestamp="1607780858811">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="430" y="189" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607780858811" />
     <state x="665" y="411" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1607419739817">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
