@@ -35,7 +35,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b8d3ddbb-6af3-49cc-b8ee-04e78668e05a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/build.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/engine/DrawManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/engine/DrawManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
