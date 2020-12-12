@@ -19,6 +19,10 @@ repositories {
 }
 test {
     useJUnitPlatform()
+    reports {
+        junitXml.enabled = true
+        html.enabled = true
+    }
 }
 dependencies {
     implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
